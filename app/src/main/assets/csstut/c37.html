@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+#border_image_top {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(border.png) 30 round;
+}
+
+#border_image {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(border.png) 30 round;
+    text-align: center;
+}
+
+#border_image2 {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 stretch; /* Opera 11-12.1 */
+    border-image: url(border.png) 30 stretch;
+    text-align: center;
+}
+
+#border_image3 {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 50 round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 50 round; /* Opera 11-12.1 */
+    border-image: url(border.png) 50 round;
+    text-align: center;
+}
+
+#border_image4 {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 20% round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 20% round; /* Opera 11-12.1 */
+    border-image: url(border.png) 20% round;
+    text-align: center;
+}
+
+#border_image5 {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30% round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30% round; /* Opera 11-12.1 */
+    border-image: url(border.png) 30% round;
+    text-align: center;
+}		</style>
+	</head>
+	<body>
+		<h1>
+			CSS3 <span class="color_h1">Border Images</span></h1>
+		<hr />
+		<div id="border_image_top">
+			<h2>
+				CSS3 Border Images</h2>
+			<p>
+				With the CSS3 <code>border-image</code> property, you can set an image to be used as the border around an element.</p>
+		</div>
+		<hr />
+		<h2>
+			Browser Support</h2>
+		<p>
+			The numbers in the table specify the first browser version that fully supports the property.</p>
+		<p>
+			Numbers followed by -webkit-, -moz-, or -o- specify the first version that worked with a prefix.</p>
+		<div class="w3-responsive">
+			<table class="browserref notranslate">
+				<tbody>
+					<tr>
+						<th style="width:22%;font-size:16px;text-align:left;">
+							Property</th>
+						<th class="bsChrome" style="width:13%;" title="Chrome">
+							&nbsp;</th>
+						<th class="bsIE" style="width:13%;" title="Internet Explorer">
+							&nbsp;</th>
+						<th class="bsFirefox" style="width:13%;" title="Firefox">
+							&nbsp;</th>
+						<th class="bsSafari" style="width:13%;" title="Safari">
+							&nbsp;</th>
+						<th class="bsOpera" style="width:13%;" title="Opera">
+							&nbsp;</th>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							border-image</td>
+						<td>
+							16.0<br />
+							4.0&nbsp;-webkit-</td>
+						<td>
+							11.0</td>
+						<td>
+							15.0<br />
+							3.5&nbsp;-moz-</td>
+						<td>
+							6.0<br />
+							3.1&nbsp;-webkit-</td>
+						<td>
+							15.0<br />
+							11.0&nbsp;-o-</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr />
+		<h2>
+			CSS3 border-image Property</h2>
+		<p>
+			The CSS3 <code>border-image</code> property allows you to specify an image to be used instead of the normal border around an element.</p>
+		<p>
+			The property has three parts:</p>
+		<ol>
+			<li>
+				The image to use as the border</li>
+			<li>
+				Where to slice the image</li>
+			<li>
+				Define whether the middle sections should be repeated or stretched</li>
+		</ol>
+		<p>
+			We will use the following image (called &quot;border.png&quot;):</p>
+		<p>
+			<img alt="Border" src="file:///android_asset/csstut/border.png" style="width:81px;height:81px" /></p>
+		<p>
+			The <code>border-image</code> property takes the image and slices it into nine sections, like a tic-tac-toe board. It then places the corners at the corners, and the middle sections are repeated or stretched as you specify.</p>
+		<p>
+			<strong>Note:</strong> For <code>border-image</code> to work, the element also needs the <code>border</code> property set!</p>
+		<p>
+			Here, the middle sections of the image are repeated to create the border:</p>
+		<p id="border_image">
+			An image as a border!</p>
+		<p>
+			Here is the code:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">#borderimg </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 10px solid transparent;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 15px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-webkit-border-image:</span><span class="highVAL"> url(border.png) 30 round;</span> <span class="highCOM">/* Safari 3.1-5 */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-o-border-image:</span><span class="highVAL"> url(border.png) 30 round;</span> <span class="highCOM">/* Opera 11-12.1 */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-image:</span><span class="highVAL"> url(border.png) 30 round;</span><br />
+				}</div>
+		</div>
+		<p>
+			Here, the middle sections of the image are stretched to create the border:</p>
+		<p id="border_image2">
+			An image as a border!</p>
+		<p>
+			Here is the code:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">#borderimg </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 10px solid transparent;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 15px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-webkit-border-image:</span><span class="highVAL"> url(border.png) 30 stretch;</span> <span class="highCOM">/* Safari 3.1-5 */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-o-border-image:</span><span class="highVAL"> url(border.png) 30 stretch;</span> <span class="highCOM">/* Opera 11-12.1 */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-image:</span><span class="highVAL"> url(border.png) 30 stretch;</span><br />
+				}</div>
+		</div>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<b>Tip:</b> The <code>border-image</code> property is actually a shorthand property for the <code>border-image-source</code>, <code>border-image-slice</code>, <code>border-image-width</code>, <code>border-image-outset</code> and <code>border-image-repeat</code> properties.</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<h2>
+			CSS3 border-image - Different Slice Values</h2>
+		<p>
+			Different slice values completely changes the look of the border:</p>
+		<p>
+			Example 1:</p>
+		<p id="border_image3">
+			border-image: url(border.png) 50 round;</p>
+		<p>
+			Example 2:</p>
+		<p id="border_image4">
+			border-image: url(border.png) 20% round;</p>
+		<p>
+			Example 3:</p>
+		<p id="border_image5">
+			border-image: url(border.png) 30% round;</p>
+		<p>
+			Here is the code:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">#borderimg1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 10px solid transparent;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 15px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-webkit-border-image:</span><span class="highVAL"> url(border.png) 50 round;</span> <span class="highCOM">/* Safari 3.1-5 */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-o-border-image:</span><span class="highVAL"> url(border.png) 50 round;</span> <span class="highCOM">/* Opera 11-12.1 */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-image:</span><span class="highVAL"> url(border.png) 50 round;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">#borderimg2 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 10px solid transparent;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 15px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-webkit-border-image:</span><span class="highVAL"> url(border.png) 20% round;</span> <span class="highCOM">/* Safari 3.1-5 */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-o-border-image:</span><span class="highVAL"> url(border.png) 20% round;</span> <span class="highCOM">/* Opera 11-12.1 */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-image:</span><span class="highVAL"> url(border.png) 20% round;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">#borderimg3 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 10px solid transparent;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 15px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-webkit-border-image:</span><span class="highVAL"> url(border.png) 30% round;</span> <span class="highCOM">/* Safari 3.1-5 */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-o-border-image:</span><span class="highVAL"> url(border.png) 30% round;</span> <span class="highCOM">/* Opera 11-12.1 */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-image:</span><span class="highVAL"> url(border.png) 30% round;</span><br />
+				}</div>
+		</div>
+	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>

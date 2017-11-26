@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Text</span></h1>
+		<div style="width:100%;border:1px solid gray;padding:8px;">
+			<h1 style="text-align:center;text-transform:uppercase;color:#4CAF50;">
+				text formatting</h1>
+			<p style="text-indent:50px;text-align:justify;letter-spacing:3px;">
+				This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties. The paragraph is indented, aligned, and the space between characters is specified. The underline is removed from this colored <span style="text-decoration:none;color:#008CBA;">&quot;Try it yourself&quot;</span> link.</p>
+		</div>
+		<hr />
+		<h2>
+			Text Color</h2>
+		<p>
+			The <code>color</code> property is used to set the color of the text.</p>
+		<p>
+			With CSS, a color is most often specified by:</p>
+		<ul>
+			<li>
+				a color name - like &quot;red&quot;</li>
+			<li>
+				a HEX value - like &quot;#ff0000&quot;</li>
+			<li>
+				an RGB value - like &quot;rgb(255,0,0)&quot;</li>
+		</ul>
+		<p>
+			The default text color for a page is defined in the body selector.</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> blue;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">h1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> green;</span><br />
+				}</div>
+		</div>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<b>Note:</b> For W3C compliant CSS: If you define the <code>color</code> property, you must also define the <code>background-color</code> property.</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<h2>
+			Text Alignment</h2>
+		<p>
+			The <code>text-align</code> property is used to set the horizontal alignment of a text.</p>
+		<p>
+			A text can be left or right aligned, centered, or justified.</p>
+		<p>
+			The following example shows center aligned, and left and right aligned text (left alignment is default if text direction is left-to-right, and right alignment is default if text direction is right-to-left):</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">h1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">h2 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> left;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">h3 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> right;</span><br />
+				}</div>
+		</div>
+		<p>
+			When the <code>text-align</code> property is set to &quot;justify&quot;, each line is stretched so that every line has equal width, and the left and right margins are straight (like in magazines and newspapers):</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> justify;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Text Decoration</h2>
+		<p>
+			The <code>text-decoration</code> property is used to set or remove decorations from text.</p>
+		<p>
+			The value <code>text-decoration: none;</code> is often used to remove underlines from links:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-decoration:</span><span class="highVAL"> none;</span><br />
+				}</div>
+		</div>
+		<p>
+			The other <code>text-decoration</code> values are used to decorate text:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">h1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-decoration:</span><span class="highVAL"> overline;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">h2 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-decoration:</span><span class="highVAL"> line-through;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">h3 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-decoration:</span><span class="highVAL"> underline;</span><br />
+				}</div>
+		</div>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<b>Note:</b> It is not recommended to underline text that is not a link, as this often confuses the reader.</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<h2>
+			Text Transformation</h2>
+		<p>
+			The <code>text-transform</code> property is used to specify uppercase and lowercase letters in a text.</p>
+		<p>
+			It can be used to turn everything into uppercase or lowercase letters, or capitalize the first letter of each word:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p.uppercase </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-transform:</span><span class="highVAL"> uppercase;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.lowercase </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-transform:</span><span class="highVAL"> lowercase;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.capitalize </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-transform:</span><span class="highVAL"> capitalize;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Text Indentation</h2>
+		<p>
+			The <code>text-indent</code> property is used to specify the indentation of the first line of a text:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-indent:</span><span class="highVAL"> 50px;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Letter Spacing</h2>
+		<p>
+			The <code>letter-spacing</code> property is used to specify the space between the characters in a text.</p>
+		<p>
+			The following example demonstrates how to increase or decrease the space between characters:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">h1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">letter-spacing:</span><span class="highVAL"> 3px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">h2 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">letter-spacing:</span><span class="highVAL"> -3px;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Line Height</h2>
+		<p>
+			The <code>line-height</code> property is used to specify the space between lines:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p.small </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">line-height:</span><span class="highVAL"> 0.8;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.big </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">line-height:</span><span class="highVAL"> 1.8;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Text Direction</h2>
+		<p>
+			The <code>direction</code> property is used to change the text direction of an element:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">direction:</span><span class="highVAL"> rtl;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Word Spacing</h2>
+		<p>
+			The <code>word-spacing</code> property is used to specify the space between the words in a text.</p>
+		<p>
+			The following example demonstrates how to increase or decrease the space between words:&nbsp;</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">h1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">word-spacing:</span><span class="highVAL"> 10px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">h2 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">word-spacing:</span><span class="highVAL"> -5px;</span><br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

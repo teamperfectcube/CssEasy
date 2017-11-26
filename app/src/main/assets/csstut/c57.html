@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS3 <span class="color_h1">Media Queries - Examples</span></h1>
+		<hr />
+		<h2>
+			CSS3 Media Queries - More Examples</h2>
+		<p>
+			Let us look at some more examples of using media queries.</p>
+		<p>
+			We will start with a list of names which function as email links. The HTML is:</p>
+		<div class="w3-example">
+			<h3>
+				Example 1</h3>
+			<div class="w3-code notranslate htmlHigh">
+				<span class="highLT">&lt;</span><span class="highELE">!DOCTYPE</span> <span class="highATT">html</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">html</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">head</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">style</span><span class="highGT">&gt;</span><br />
+				ul {<br />
+				&nbsp;&nbsp;&nbsp; list-style-type: none;<br />
+				}<br />
+				<br />
+				ul li a {<br />
+				&nbsp;&nbsp;&nbsp; color: green;<br />
+				&nbsp;&nbsp;&nbsp; text-decoration: none;<br />
+				&nbsp;&nbsp;&nbsp; padding: 3px;<br />
+				&nbsp;&nbsp;&nbsp; display: block;<br />
+				}<br />
+				<span class="highLT">&lt;</span><span class="highELE">/style</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">/head</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">body</span><span class="highGT">&gt;</span><br />
+				<br />
+				<span class="highLT">&lt;</span><span class="highELE">ul</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">data-email=</span><span class="highVAL">&quot;johndoe@example.com&quot;</span> <span class="highATT">href=</span><span class="highVAL">&quot;mailto:johndoe@example.com&quot;</span><span class="highGT">&gt;</span>John Doe<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">data-email=</span><span class="highVAL">&quot;marymoe@example.com&quot;</span> <span class="highATT">href=</span><span class="highVAL">&quot;mailto:marymoe@example.com&quot;</span><span class="highGT">&gt;</span>Mary Moe<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">data-email=</span><span class="highVAL">&quot;amandapanda@example.com&quot;</span> <span class="highATT">href=</span><span class="highVAL">&quot;mailto:amandapanda@example.com&quot;</span><span class="highGT">&gt;</span>Amanda Panda<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">/ul</span><span class="highGT">&gt;</span><br />
+				<br />
+				<span class="highLT">&lt;</span><span class="highELE">/body</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">/html</span><span class="highGT">&gt;</span></div>
+		</div>
+		<p>
+			Notice the <code>data-email</code> attribute. In HTML5, we can use attributes prefixed with <code>data-</code> to store information. We will use the<code> data-</code> attribute later.</p>
+		<hr />
+		<h2>
+			Width from 520 to 699px - Apply an email icon to each link</h2>
+		<p>
+			When the browser&#39;s width is between 520 and 699px, we will apply an email icon to each email link:</p>
+		<div class="w3-example">
+			<h3>
+				Example 2</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">@media screen and (max-width: 699px) and (min-width: 520px) </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; ul li a </span>{<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">padding-left:</span><span class="highVAL"> 30px;</span><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> url(email-icon.png) left center no-repeat;</span><br />
+				&nbsp;&nbsp;&nbsp; }<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Width from 700 to 1000px - Preface the links with a text</h2>
+		<p>
+			When the browser&#39;s width is between from 700 to 1000px, we will preface each email link with the text &quot;Email: &quot;:</p>
+		<div class="w3-example">
+			<h3>
+				Example 3</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">@media screen and (max-width: 1000px) and (min-width: 700px) </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; ul li a:before </span>{<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">content:</span><span class="highVAL"> &quot;Email: &quot;;</span><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">font-style:</span><span class="highVAL"> italic;</span><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #666666;</span><br />
+				&nbsp;&nbsp;&nbsp; }<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Width above 1001px - Apply email address to links</h2>
+		<p>
+			When the browser&#39;s width is above 1001px, we will append the email address to the links.</p>
+		<p>
+			We will use the value of the <code>data-</code> attribute to add the email address after the person&#39;s name:</p>
+		<div class="w3-example">
+			<h3>
+				Example 4</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">@media screen and (min-width: 1001px) </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; ul li a:after </span>{<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">content:</span><span class="highVAL"> &quot; (&quot; attr(data-email) &quot;)&quot;;</span><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">font-size:</span><span class="highVAL"> 12px;</span><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">font-style:</span><span class="highVAL"> italic;</span><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #666666;</span><br />
+				&nbsp;&nbsp;&nbsp; }<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Width above 1151px - Add icon as we used before</h2>
+		<p>
+			For browser widths above 1151px, we will again add the icon as we used before.</p>
+		<p>
+			Here, we do not have to write an additional media query block, we can just append an additional media query to our already existing one using a comma (this will behave like an OR operator):</p>
+		<div class="w3-example">
+			<h3>
+				Example 5</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">@media screen and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; ul li a </span>{<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">padding-left:</span><span class="highVAL"> 30px;</span><br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> url(email-icon.png) left center no-repeat;</span><br />
+				&nbsp;&nbsp;&nbsp; }<br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

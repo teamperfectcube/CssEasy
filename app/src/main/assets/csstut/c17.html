@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<script>
+function myShowFunction() {
+    document.getElementById("panel").style.display = "block";
+}
+</script>
+		<style type="text/css">
+#panel, .flip {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    border: solid 1px #a6d8a8;
+    margin: auto;
+}
+
+#panel {
+    display: none;
+}		</style>
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Layout - The display</span> Property</h1>
+		<hr />
+		<p class="intro">
+			The <code>display</code> property is the most important CSS property for controlling layout.</p>
+		<hr />
+		<h2>
+			The display Property</h2>
+		<p class="intro">
+			The <code>display</code> property specifies if/how an element is displayed.</p>
+		<p>
+			Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is <code>block</code> or <code>inline</code>.</p>
+		<p class="flip" onclick="myShowFunction()">
+			Click to show panel</p>
+		<div id="panel">
+			<p>
+				This panel contains a &lt;div&gt; element, which is hidden by default (<code>display: none</code>).</p>
+			<p>
+				It is styled with CSS, and we use JavaScript to show it (change it to (<code>display: block</code>).</p>
+		</div>
+		<hr />
+		<h2>
+			Block-level Elements</h2>
+		<p>
+			A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
+		<div style="border:3px solid #73AD21;">
+			The &lt;div&gt; element is a block-level element.</div>
+		<p>
+			Examples of block-level elements:</p>
+		<ul>
+			<li>
+				&lt;div&gt;</li>
+			<li>
+				&lt;h1&gt; - &lt;h6&gt;</li>
+			<li>
+				&lt;p&gt;</li>
+			<li>
+				&lt;form&gt;</li>
+			<li>
+				&lt;header&gt;</li>
+			<li>
+				&lt;footer&gt;</li>
+			<li>
+				&lt;section&gt;</li>
+		</ul>
+		<hr />
+		<h2>
+			Inline Elements</h2>
+		<p>
+			An inline element does not start on a new line and only takes up as much width as necessary.</p>
+		<p>
+			This is <span style="border:3px solid #73AD21;">an inline &lt;span&gt; element inside</span> a paragraph.</p>
+		<p>
+			Examples of inline elements:</p>
+		<ul>
+			<li>
+				&lt;span&gt;</li>
+			<li>
+				&lt;a&gt;</li>
+			<li>
+				&lt;img&gt;</li>
+		</ul>
+		<hr />
+		<h2>
+			Display: none;</h2>
+		<p>
+			<code>display: none;</code> is commonly used with JavaScript to hide and show elements without deleting and recreating them. Take a look at our last example on this page if you want to know how this can be achieved.</p>
+		<p>
+			The <code>&lt;script&gt;</code> element use <code>display: none;</code> as its default.&nbsp;</p>
+		<hr />
+		<h2>
+			Override The Default Display Value</h2>
+		<p>
+			As mentioned, every element has a default display value. However, you can override this.</p>
+		<p>
+			Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific way, and still follow the web standards.</p>
+		<p>
+			A common example is making inline <code>&lt;li&gt;</code> elements for horizontal menus:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">li </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> inline;</span><br />
+				}</div>
+		</div>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<b>Note:</b> Setting the display property of an element only changes <strong>how the element is displayed</strong>, NOT what kind of element it is. So, an inline element with <code>display: block;</code> is not allowed to have other block elements inside it.</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			The following example displays &lt;span&gt; elements as block elements:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">span </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> block;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Hide an Element - display:none or visibility:hidden?</h2>
+		<p>
+			Hiding an element can be done by setting the <code>display</code> property to <code>none</code>. The element will be hidden, and the page will be displayed as if the element is not there:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">h1.hidden </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> none;</span><br />
+				}</div>
+		</div>
+		<p>
+			<code>visibility:hidden;</code> also hides an element.</p>
+		<p>
+			However, the element will still take up the same space as before. The element will be hidden, but still affect the layout:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">h1.hidden </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">visibility:</span><span class="highVAL"> hidden;</span><br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

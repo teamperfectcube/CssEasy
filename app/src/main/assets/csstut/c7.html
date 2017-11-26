@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Margins</span></h1>
+		<hr />
+		<div style="border:1px solid #73AD21;padding:10px;margin:40px;">
+			<h2 style="word-break:break-all;">
+				CSS Margin Properties</h2>
+			<p>
+				The CSS margin properties are used to generate space around elements.</p>
+			<p>
+				The margin properties set the size of the white space OUTSIDE the border.</p>
+			<p>
+				This element has a margin of 40px.</p>
+		</div>
+		<hr />
+		<h2>
+			CSS Margins</h2>
+		<p>
+			The CSS margin properties set the size of the white space OUTSIDE the border.</p>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<b>Note:</b> The margins are completely transparent - and cannot have a background color!</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			With CSS, you have full control over the margins. There are CSS properties for setting the margin for each side of an element (top, right, bottom, and left).</p>
+		<hr />
+		<h2>
+			Margin - Individual Sides</h2>
+		<p>
+			CSS has properties for specifying the margin for each side of an element:</p>
+		<ul>
+			<li>
+				<code>margin-top</code></li>
+			<li>
+				<code>margin-right</code></li>
+			<li>
+				<code>margin-bottom</code></li>
+			<li>
+				<code>margin-left</code></li>
+		</ul>
+		<p>
+			All the margin properties can have the following values:</p>
+		<ul>
+			<li>
+				auto - the browser calculates the margin</li>
+			<li>
+				<em>length</em> - specifies a margin in px, pt, cm, etc.</li>
+			<li>
+				<em>%</em> - specifies a margin in % of the width of the containing element</li>
+			<li>
+				inherit - specifies that the margin should be inherited from the parent element</li>
+		</ul>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<b>Note:</b> It is also possible to use negative values for margins; to overlap content.</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			The following example sets different margins for all four sides of a &lt;p&gt; element:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin-top:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin-bottom:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin-right:</span><span class="highVAL"> 150px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin-left:</span><span class="highVAL"> 80px;</span><br />
+				}</div>
+		</div>
+		<p>
+			The following example lets the left margin be inherited from the parent element:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div.container </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin-left:</span><span class="highVAL"> 100px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.one </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin-left:</span><span class="highVAL"> inherit;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Margin - Shorthand Property</h2>
+		<p>
+			To shorten the code, it is possible to specify all the margin properties in one property.</p>
+		<p>
+			The <code>margin</code> property is a shorthand property for the following individual margin properties:</p>
+		<ul>
+			<li>
+				<code>margin-top</code></li>
+			<li>
+				<code>margin-right</code></li>
+			<li>
+				<code>margin-bottom</code></li>
+			<li>
+				<code>margin-left</code></li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 100px 150px 100px 80px;</span><br />
+				}</div>
+		</div>
+		<p>
+			So, here is how it works:</p>
+		<p>
+			If the <code>margin</code> property has four values:</p>
+		<ul>
+			<li>
+				<b>margin: 25px 50px 75px 100px; </b>
+				<ul>
+					<li>
+						top margin is 25px</li>
+					<li>
+						right margin is 50px</li>
+					<li>
+						bottom margin is 75px</li>
+					<li>
+						left margin is 100px</li>
+				</ul>
+			</li>
+		</ul>
+		<p>
+			If the <code>margin</code> property has three values:</p>
+		<ul>
+			<li>
+				<b>margin: 25px 50px 75px;</b>
+				<ul>
+					<li>
+						top margin is 25px</li>
+					<li>
+						right and left margins are 50px</li>
+					<li>
+						bottom margin is 75px</li>
+				</ul>
+			</li>
+		</ul>
+		<p>
+			If the <code>margin</code> property has two values:</p>
+		<ul>
+			<li>
+				<b>margin: 25px 50px;</b>
+				<ul>
+					<li>
+						top and bottom margins are 25px</li>
+					<li>
+						right and left margins are 50px</li>
+				</ul>
+			</li>
+		</ul>
+		<p>
+			If the <code>margin</code> property has one value:</p>
+		<ul>
+			<li>
+				<b>margin: 25px;</b>
+				<ul>
+					<li>
+						all four margins are 25px</li>
+				</ul>
+			</li>
+		</ul>
+		<hr />
+		<h2>
+			Use of The auto Value</h2>
+		<p>
+			You can set the margin property to <code>auto</code> to horizontally center the element within its container.</p>
+		<p>
+			The element will then take up the specified width, and the remaining space will be split equally between the left and right margins:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 300px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> auto;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid red;</span><br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

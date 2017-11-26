@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+.btn {
+background-color: #4CAF50;
+border: none;
+color: #FFFFFF;
+padding: 15px 32px;
+text-align: center;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+margin: 16px 0 !important;
+text-decoration: none;
+font-size:16px;
+}
+
+.btn1 {background-color: #4CAF50;} /* Green */
+.btn2 {background-color: #008CBA;} /* Blue */
+.btn3 {background-color: #f44336;} /* Red */
+.btn4 {background-color: #e7e7e7;color:black;} /* Grey */
+.btn5 {background-color: #555555;} /* Orange */
+
+.btn1:hover {background-color: #4CAF50;}
+.btn2:hover {background-color: #008CBA;}
+.btn3:hover {background-color: #f44336;}
+.btn4:hover {background-color: #e7e7e7;color:black;}
+.btn5:hover {background-color: #555555;}
+
+.font1 {font-size:10px;}
+.font2 {font-size:12px;}
+.font3 {font-size:16px;}
+.font4 {font-size:20px;}
+.font5 {font-size:24px;}
+.round1 {border-radius:2px}
+.round2 {border-radius:4px}
+.round3 {border-radius:8px}
+.round4 {border-radius:12px}
+.round5 {border-radius:50%}
+.width1 {width: 250px}
+.width2 {width: 50%}
+.width3 {width: 100%}
+
+.border1 {border-radius:3px;background-color:white;color:black;border:2px solid #4CAF50;}
+.border2 {border-radius:3px;background-color:white;color:black;border:2px solid #008CBA;}
+.border3 {border-radius:3px;background-color:white;color:black;border:2px solid #f44336;}
+.border4 {border-radius:3px;background-color:white;color:black;border:2px solid #e7e7e7;}
+.border5 {border-radius:3px;background-color:white;color:black;border:2px solid #555555;}
+
+.border11:hover {background-color:#4CAF50;color:white;}
+.border22:hover {background-color:#008CBA;color:white;}
+.border33:hover {background-color:#f44336;color:white;}
+.border44:hover {background-color:#e7e7e7;}
+.border55:hover {background-color:#555555;color:white;}
+
+.border111{border-radius:3px;background-color:#4CAF50;color:white;}
+.border222{border-radius:3px;background-color:#008CBA;color:white;}
+.border333 {border-radius:3px;background-color:#f44336;color:white;}
+.border444 {border-radius:3px;background-color:#e7e7e7;}
+.border555 {border-radius:3px;background-color:#555555;color:white;}
+
+.border111:hover {background-color:white;color:black;border:2px solid #4CAF50;}
+.border222:hover {background-color:white;color:black;border:2px solid #008CBA;}
+.border333:hover {background-color:white;color:black;border:2px solid #f44336;}
+.border444:hover {background-color:white;color:black;border:2px solid #e7e7e7;}
+.border555:hover {background-color:white;color:black;border:2px solid #555555;}
+
+
+.shadow1{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important}
+.shadow2:hover{box-shadow:0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19) !important}
+
+.disabled{cursor: not-allowed;opacity: 0.6;}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.pressed {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.pressed:hover {background-color: #3e8e41}
+
+.pressed:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.float {
+    margin: 0 !important;
+	float: left;
+    transition: none;
+}
+
+.float:hover {
+    background-color: #3e8e41;
+}		</style>
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Buttons</span></h1>
+		<hr />
+		<p class="intro">
+			Learn how to style buttons using CSS.</p>
+		<hr />
+		<h2>
+			Basic Button Styling</h2>
+		<p>
+			<button style="margin-right:25px;">Default Button</button><button class="btn w3-green">CSS Button</button></p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				.button {<br />
+				&nbsp;&nbsp;&nbsp; background-color: #4CAF50; /* Green */<br />
+				&nbsp;&nbsp;&nbsp; border: none;<br />
+				&nbsp;&nbsp;&nbsp; color: white;<br />
+				&nbsp;&nbsp;&nbsp; padding: 15px 32px;<br />
+				&nbsp;&nbsp;&nbsp; text-align: center;<br />
+				&nbsp;&nbsp;&nbsp; text-decoration: none;<br />
+				&nbsp;&nbsp;&nbsp; display: inline-block;<br />
+				&nbsp;&nbsp;&nbsp; font-size: 16px;<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Button Colors</h2>
+		<p>
+			<button class="btn btn1" type="button">Green</button><button class="btn btn2" type="button">Blue</button><button class="btn btn3" type="button">Red</button><button class="btn btn4" type="button">Gray</button><button class="btn btn5" type="button">Black</button></p>
+		<p>
+			Use the <code>background-color</code> property to change the background color of a button:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				.button1 {background-color: #4CAF50;} /* Green */<br />
+				.button2 {background-color: #008CBA;} /* Blue */<br />
+				.button3 {background-color: #f44336;} /* Red */<br />
+				.button4 {background-color: #e7e7e7; color: black;} /* Gray */<br />
+				.button5 {background-color: #555555;} /* Black */</div>
+		</div>
+		<hr />
+		<h2>
+			Button Sizes</h2>
+		<p>
+			<button class="btn btn1 font1" type="button">10px</button><button class="btn btn2 font2" type="button">12px</button><button class="btn btn3 font3" type="button">16px</button><button class="btn btn4 font4" type="button">20px</button><button class="btn btn5 font5" type="button">24px</button></p>
+		<p>
+			Use the <code>font-size</code> property to change the size of a button:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				.button1 {font-size: 10px;}<br />
+				.button2 {font-size: 12px;}<br />
+				.button3 {font-size: 16px;}<br />
+				.button4 {font-size: 20px;}<br />
+				.button5 {font-size: 24px;}</div>
+		</div>
+		<hr />
+		<h2>
+			Rounded Buttons</h2>
+		<p>
+			<button class="btn btn1 round1" type="button">2px</button><button class="btn btn2 round2" type="button">4px</button><button class="btn btn3 round3" type="button">8px</button><button class="btn btn4 round4" type="button">12px</button><button class="btn btn5 round5" type="button">50%</button></p>
+		<p>
+			Use the <code>border-radius</code> property to add rounded corners to a button:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				.button1 {border-radius: 2px;}<br />
+				.button2 {border-radius: 4px;}<br />
+				.button3 {border-radius: 8px;}<br />
+				.button4 {border-radius: 12px;}<br />
+				.button5 {border-radius: 50%;}</div>
+		</div>
+		<hr />
+		<h2>
+			Colored Button Borders</h2>
+		<p>
+			<button class="btn border1" type="button">Green</button><button class="btn border2" type="button">Blue</button><button class="btn border3" type="button">Red</button><button class="btn border4" type="button">Gray</button><button class="btn border5" type="button">Black</button></p>
+		<p>
+			Use the <code>border</code> property to add a colored border to a button:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				.button1 {<br />
+				&nbsp;&nbsp;&nbsp; background-color: white;<br />
+				&nbsp;&nbsp;&nbsp; color: black;<br />
+				&nbsp;&nbsp;&nbsp; border: 2px solid #4CAF50; /* Green */<br />
+				}<br />
+				...</div>
+		</div>
+		<hr />
+		<h2>
+			Hoverable Buttons</h2>
+		<p>
+			<button class="btn border1 border111" type="button">Green</button><button class="btn border2 border222" type="button">Blue</button><button class="btn border3 border333" type="button">Red</button><button class="btn border4 border444" type="button">Grey</button><button class="btn border5 border555" type="button">Black</button><br />
+			<button class="btn border1 border11" type="button">Green</button><button class="btn border2 border22" type="button">Blue</button><button class="btn border3 border33" type="button">Red</button><button class="btn border4 border44" type="button">Grey</button><button class="btn border5 border55" type="button">Black</button></p>
+		<p>
+			Use the <code>:hover</code> selector to change the style of a button when you move the mouse over it.</p>
+		<p>
+			<strong>Tip:</strong> Use the <code>transition-duration</code> property to determine the speed of the &quot;hover&quot; effect:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				.button {<br />
+				&nbsp;&nbsp;&nbsp; -webkit-transition-duration: 0.4s; /* Safari */<br />
+				&nbsp;&nbsp;&nbsp; transition-duration: 0.4s;<br />
+				}<br />
+				<br />
+				.button:hover {<br />
+				&nbsp;&nbsp;&nbsp; background-color: #4CAF50; /* Green */<br />
+				&nbsp;&nbsp;&nbsp; color: white;<br />
+				}<br />
+				...</div>
+		</div>
+		<hr />
+		<h2>
+			Shadow Buttons</h2>
+		<p>
+			<button class="btn shadow1" type="button">Shadow Button</button><button class="btn shadow2" type="button">Shadow on hover</button></p>
+		<p>
+			Use the <code>box-shadow</code> property to add shadows to a button:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				.button1 {<br />
+				&nbsp;&nbsp;&nbsp; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);<br />
+				}<br />
+				<br />
+				.button2:hover {<br />
+				&nbsp;&nbsp;&nbsp; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Disabled Buttons</h2>
+		<p>
+			<button class="btn" type="button">Normal Button</button><button class="btn disabled" type="button">Disabled Button</button></p>
+		<p>
+			Use the <code>opacity</code> property to add transparency to a button (creates a &quot;disabled&quot; look).</p>
+		<p>
+			<strong>Tip:</strong> You can also add the <code>cursor</code> property with a value of &quot;not-allowed&quot;, which will display a &quot;no parking sign&quot; when you mouse over the button:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				.disabled {<br />
+				&nbsp;&nbsp;&nbsp; opacity: 0.6;<br />
+				&nbsp;&nbsp;&nbsp; cursor: not-allowed;<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Button Width</h2>
+		<p>
+			<button class="btn btn1 width1" type="button">250px</button><br />
+			<button class="btn btn2 width2" type="button">50%</button><button class="btn btn3 width3" type="button">100%</button></p>
+		<p>
+			By default, the size of the button is determined by its text content (as wide as its content). Use the <code>width</code> property to change the width of a button:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				.button1 {width: 250px;}<br />
+				.button2 {width: 50%;}<br />
+				.button3 {width: 100%;}</div>
+		</div>
+		<hr />
+		<h2>
+			Button Groups</h2>
+		<p>
+			<button class="btn btn1 float" type="button">Button</button><button class="btn btn1 float" type="button">Button</button><button class="btn btn1 float" type="button">Button</button><button class="btn btn1 float" type="button">Button</button></p>
+		<p style="clear:both">
+			<br />
+			Remove margins and add <code>float:left</code> to each button to create a button group:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				.button {<br />
+				&nbsp;&nbsp;&nbsp; float: left;<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Bordered Button Groups</h2>
+		<p>
+			<button class="btn btn1 float" style="border:1px solid green" type="button">Button</button><button class="btn btn1 float" style="border:1px solid green" type="button">Button</button><button class="btn btn1 float" style="border:1px solid green" type="button">Button</button><button class="btn btn1 float" style="border:1px solid green" type="button">Button</button></p>
+		<p style="clear:both">
+			<br />
+			Use the <code>border</code> property to create a bordered button group:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				.button {<br />
+				&nbsp;&nbsp;&nbsp; float: left;<br />
+				&nbsp;&nbsp;&nbsp; border: 1px solid green<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Animated Buttons</h2>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<p>
+				Add an arrow on hover:</p>
+			<div class="w3-padding-left w3-padding-16 w3-white">
+				<button class="button" style="vertical-align:middle"><span>Hover </span></button></div>
+		</div>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<p>
+				Add a &quot;ripple&quot; effect on click:</p>
+			<div class="w3-padding-left w3-padding-16 w3-white">
+				<button class="w3-btn w3-ripple w3-hover-green w3-hover-none" style="box-shadow:none;margin:5px;width:180px;padding:20px;font-size:28px;"><span>Click </span></button></div>
+		</div>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<p>
+				Add a &quot;pressed&quot; effect on click:</p>
+			<div class="w3-padding-left w3-padding-16 w3-white">
+				<button class="pressed" style="margin:5px;width:180px;padding:20px;font-size:28px;"><span>Click </span></button></div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

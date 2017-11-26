@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+#klem1,#klem2
+{
+opacity:0.4;
+filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+#klem1:hover,#klem2:hover
+{
+opacity:1.0;
+filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+div.background
+  {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+  }
+div.transbox
+  {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  /* for IE */
+  filter:alpha(opacity=60);
+  /* CSS3 standard */
+  opacity:0.6;
+  }
+div.transbox p
+  {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+  }		</style>
+	</head>
+	<body>
+		<h1>
+			CSS Image <span class="color_h1">Opacity / Transparency</span></h1>
+		<hr />
+		<p class="intro">
+			Creating transparent images with CSS is easy.</p>
+		<p class="intro">
+			The CSS <code>opacity</code> property is a part of the CSS3 recommendation.</p>
+		<hr />
+		<h2>
+			Example 1 - Creating a Transparent Image</h2>
+		<p>
+			The CSS3 property for transparency is <code>opacity</code>.</p>
+		<p>
+			First we will show you how to create a transparent image with CSS.</p>
+		<div class="w3-row">
+			<div class="w3-half">
+				<p>
+					Regular image:</p>
+				<img alt="klematis" height="113" src="file:///android_asset/csstut/klematis.jpg" width="150" /></div>
+			<div class="w3-half">
+				<p>
+					The same image with transparency:</p>
+				<img alt="klematis" height="113" src="file:///android_asset/csstut/klematis.jpg" style="opacity:0.4;filter:alpha(opacity=40)" width="150" /></div>
+		</div>
+		<br />
+		<p>
+			Look at the following CSS:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">img </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">opacity:</span><span class="highVAL"> 0.4;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">filter:</span><span class="highVAL"> alpha(opacity=40);</span> <span class="highCOM">/* For IE8 and earlier */</span><br />
+				}</div>
+		</div>
+		<p>
+			The <code>opacity</code> property can take a value from 0.0 - 1.0. The lower value, the more transparent.</p>
+		<p>
+			IE8 and earlier use <code>filter:alpha(opacity=x)</code>. The x can take a value from 0 - 100. A lower value makes the element more transparent.</p>
+		<hr />
+		<h2>
+			Example 2 - Image Transparency - Hover Effect</h2>
+		<p>
+			Mouse over the images:</p>
+		<p>
+			<img alt="klematis" height="113" id="klem1" src="file:///android_asset/csstut/klematis.jpg" width="150" /> <img alt="klematis" height="113" id="klem2" src="file:///android_asset/csstut/klematis2.jpg" width="150" /></p>
+		<p style="margin-top:12px;">
+			The CSS looks like this:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">img </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">opacity:</span><span class="highVAL"> 0.4;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">filter:</span><span class="highVAL"> alpha(opacity=40);</span> <span class="highCOM">/* For IE8 and earlier */</span><br />
+				}<br />
+				<br />
+				<span class="highELE">img:hover </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">opacity:</span><span class="highVAL"> 1.0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">filter:</span><span class="highVAL"> alpha(opacity=100);</span> <span class="highCOM">/* For IE8 and earlier */</span><br />
+				}</div>
+		</div>
+		<p>
+			The first CSS block is similar to the code in Example 1. In addition, we have added what should happen when a user hovers over one of the images. In this case we want the image to NOT be transparent when the user hovers over it. The CSS for this is <code>opacity:1;</code>.</p>
+		<p>
+			When the mouse pointer moves away from the image, the image will be transparent again.</p>
+		<hr />
+		<h2>
+			Example 3 - Text in Transparent Box</h2>
+		<div class="background">
+			<div class="transbox">
+				<p>
+					This is some text that is placed in the transparent box.</p>
+			</div>
+		</div>
+		<p>
+			The source code looks like this:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+				<span class="highLT">&lt;</span><span class="highELE">html</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">head</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">style</span><span class="highGT">&gt;</span><br />
+				<span class="cssHigh"><span class="highELE">div.background </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> url(klematis.jpg) repeat;</span><br />
+				&nbsp; &nbsp; <span class="highATT">border:</span><span class="highVAL"> 2px solid black;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">div.transbox </span>{<br />
+				&nbsp; &nbsp; <span class="highATT">margin:</span><span class="highVAL"> 30px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #ffffff;</span><br />
+				&nbsp; &nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid black;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">opacity:</span><span class="highVAL"> 0.6;</span><br />
+				&nbsp; &nbsp; <span class="highATT">filter:</span><span class="highVAL"> alpha(opacity=60);</span>&nbsp;<span class="highCOM">/* For IE8 and earlier */</span><br />
+				}<br />
+				<br />
+				<span class="highELE">div.transbox p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 5%;</span><br />
+				&nbsp; &nbsp; <span class="highATT">font-weight:</span><span class="highVAL"> bold;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #000000;</span><br />
+				}</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">/style</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">/head</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">body</span><span class="highGT">&gt;</span><br />
+				<br />
+				<span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">class=</span><span class="highVAL">&quot;background&quot;</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">class=</span><span class="highVAL">&quot;transbox&quot;</span><span class="highGT">&gt;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highLT">&lt;</span><span class="highELE">p</span><span class="highGT">&gt;</span>This is some text that is placed in the transparent box.<span class="highLT">&lt;</span><span class="highELE">/p</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
+				<br />
+				<span class="highLT">&lt;</span><span class="highELE">/body</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">/html</span><span class="highGT">&gt;</span></div>
+		</div>
+		<p>
+			First, we create a &lt;div&gt; element (class=&quot;background&quot;) with a background image, and a border. Then we create another &lt;div&gt; (class=&quot;transbox&quot;) inside the first &lt;div&gt;. The &lt;div class=&quot;transbox&quot;&gt; have a background color, and a border - the div is transparent. Inside the transparent &lt;div&gt;, we add some text inside a &lt;p&gt; element.</p>
+	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>

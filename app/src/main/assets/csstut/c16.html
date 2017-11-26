@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Outline</span></h1>
+		<div style="width:100%;border:2px solid black;outline:#73AD21 double 10px;padding:10px;">
+			<h2>
+				CSS Outline Properties</h2>
+			<p>
+				An outline is a line drawn around an element - outside the border. This can be use to make an element &quot;stand out&quot;.</p>
+			<p>
+				The CSS outline properties specify the style, color, and width of an outline.</p>
+			<p>
+				This element has a thin black border and a double outline that is 10px wide and green.</p>
+		</div>
+		<hr />
+		<h2>
+			CSS Outline</h2>
+		<p>
+			An outline is a line that is drawn around elements (outside the borders) to make the element &quot;stand out&quot;.</p>
+		<p>
+			However, the outline property is different from the border property - The outline is NOT a part of an element&#39;s dimensions; the element&#39;s total width and height is not affected by the width of the outline.</p>
+		<p>
+			<img alt="Outline" height="289" src="file:///android_asset/csstut/box_outline.gif" width="536" /></p>
+		<br />
+		<hr />
+		<h2>
+			Outline Style</h2>
+		<p>
+			The <code>outline-style</code> property specifies the style of the outline.</p>
+		<p>
+			The <code>outline-style</code> property can have one of the following values:</p>
+		<ul>
+			<li>
+				<code>dotted</code> - Defines a dotted outline</li>
+			<li>
+				<code>dashed</code> - Defines a dashed outline</li>
+			<li>
+				<code>solid</code> - Defines a solid outline</li>
+			<li>
+				<code>double</code> - Defines a double outline</li>
+			<li>
+				<code>groove</code> - Defines a 3D grooved outline. The effect depends on the outline-color value</li>
+			<li>
+				<code>ridge</code> - Defines a 3D ridged outline. The effect depends on the outline-color value</li>
+			<li>
+				<code>inset</code> - Defines a 3D inset outline. The effect depends on the outline-color value</li>
+			<li>
+				<code>outset</code> - Defines a 3D outset outline. The effect depends on the outline-color value</li>
+			<li>
+				<code>none</code> - Defines no outline</li>
+			<li>
+				<code>hidden</code> - Defines a hidden outline</li>
+		</ul>
+		<p>
+			The following example first sets a thin black border around each &lt;p&gt; element, then it shows the different <code>outline-style</code> values:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid black;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline-color:</span><span class="highVAL"> red;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.dotted </span>{<span class="highATT">outline-style:</span><span class="highVAL"> dotted;</span>}<br />
+				<span class="highELE">p.dashed </span>{<span class="highATT">outline-style:</span><span class="highVAL"> dashed;</span>}<br />
+				<span class="highELE">p.solid </span>{<span class="highATT">outline-style:</span><span class="highVAL"> solid;</span>}<br />
+				<span class="highELE">p.double </span>{<span class="highATT">outline-style:</span><span class="highVAL"> double;</span>}<br />
+				<span class="highELE">p.groove </span>{<span class="highATT">outline-style:</span><span class="highVAL"> groove;</span>}<br />
+				<span class="highELE">p.ridge </span>{<span class="highATT">outline-style:</span><span class="highVAL"> ridge;</span>}<br />
+				<span class="highELE">p.inset </span>{<span class="highATT">outline-style:</span><span class="highVAL"> inset;</span>}<br />
+				<span class="highELE">p.outset </span>{<span class="highATT">outline-style:</span><span class="highVAL"> outset;</span>}</div>
+			<p>
+				Result:</p>
+			<div class="w3-code notranslate">
+				<p style="border: 1px solid black;outline-style: dotted;outline-color: red;">
+					A dotted outline.</p>
+				<p style="border: 1px solid black;outline-style: dashed;outline-color: red;">
+					A dashed outline.</p>
+				<p style="border: 1px solid black;outline-style: solid;outline-color: red;">
+					A solid outline.</p>
+				<p style="border: 1px solid black;outline-style: double;outline-color: red;">
+					A double outline.</p>
+				<p style="border: 1px solid black;outline-style: groove;outline-color: red;">
+					A groove outline. The effect depends on the outline-color value.</p>
+				<p style="border: 1px solid black;outline-style: ridge;outline-color: red;">
+					A ridge outline. The effect depends on the outline-color value.</p>
+				<p style="border: 1px solid black;outline-style: inset;outline-color: red;">
+					An inset outline. The effect depends on the outline-color value.</p>
+				<p style="border: 1px solid black;outline-style: outset;outline-color: red;">
+					An outset outline. The effect depends on the outline-color value.</p>
+			</div>
+		</div>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<b>Note:</b> None of the OTHER CSS outline properties described below will have ANY effect unless the <code>outline-style</code> property is set!</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<h2>
+			Outline Color</h2>
+		<p>
+			The <code>outline-color</code> property is used to set the color of the outline.</p>
+		<p>
+			The color can be set by:</p>
+		<ul>
+			<li>
+				name - specify a color name, like &quot;red&quot;</li>
+			<li>
+				RGB - specify a RGB value, like &quot;rgb(255,0,0)&quot;</li>
+			<li>
+				Hex - specify a hex value, like &quot;#ff0000&quot;</li>
+			<li>
+				invert - performs a color inversion (which ensures that the outline is visible, regardless of color background)</li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid black;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline-style:</span><span class="highVAL"> double;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline-color:</span><span class="highVAL"> red;</span><br />
+				}</div>
+			<p>
+				Result:</p>
+			<div class="w3-padding w3-white notranslate">
+				<p style="border: 1px solid black;outline-style:double;outline-color:red;">
+					A colored outline.</p>
+			</div>
+		</div>
+		<hr />
+		<h2>
+			Outline Width</h2>
+		<p>
+			The <code>outline-width</code> property specifies the width of the outline.</p>
+		<p>
+			The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick.</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<span class="highATT">border:</span><span class="highVAL"> 1px solid black;</span>}<br />
+				<br />
+				<span class="highELE">p.one </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline-style:</span><span class="highVAL"> double;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline-color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline-width:</span><span class="highVAL"> thick;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.two </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline-style:</span><span class="highVAL"> double;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline-color:</span><span class="highVAL"> green;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline-width:</span><span class="highVAL"> 3px;</span><br />
+				}</div>
+			<p>
+				Result:</p>
+			<div class="w3-padding w3-white notranslate">
+				<p style="border: 1px solid black;outline-style: double;outline-color:red;outline-width:thick;">
+					A thick outline.</p>
+				<p style="border: 1px solid black;outline-style: double;outline-color:green;outline-width:3px;">
+					A thinner outline.</p>
+			</div>
+		</div>
+		<hr />
+		<h2>
+			Outline - Shorthand property</h2>
+		<p>
+			To shorten the code, it is also possible to specify all the individual outline properties in one property.</p>
+		<p>
+			The <code>outline</code> property is a shorthand property for the following individual outline properties:</p>
+		<ul>
+			<li>
+				<code>outline-width</code></li>
+			<li>
+				<code>outline-style</code> (required)</li>
+			<li>
+				<code>outline-color</code></li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid black;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline:</span><span class="highVAL"> 5px dotted red;</span><br />
+				}</div>
+			<p>
+				Result:</p>
+			<div class="w3-padding w3-white notranslate">
+				<p style="border: 1px solid black;outline: 5px dotted red;">
+					An outline.</p>
+			</div>
+		</div>
+	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>

@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+ul.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.horizontal li {
+    float: left;
+}
+
+ul.horizontal li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.horizontal li a:hover:not(.active) {
+    background-color: #111;
+}
+
+ul.horizontal li a.active {
+    background-color:#4CAF50;
+}
+
+ul.horizontal2 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+ul.horizontal2 li {
+    float: left;
+}
+
+ul.horizontal2 li a {
+    display: inline-block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.horizontal2 li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+ul.horizontal2 a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+.width94 {
+	width:94%;
+}
+@media screen and (max-width: 600px) {
+    .width94 {
+        width:100%;
+    }
+}
+
+ul.vertical {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+ul.vertical li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+ul.vertical li a:hover:not(.active) {
+    background-color: #555;
+    color:white;
+}
+
+ul.vertical a.active {
+    background-color: #4CAF50;
+    color:white;
+}
+
+ul.gray {
+	    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+ul.gray li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.gray li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+ul.gray li a.active {
+    color: white;
+    background-color: #008CBA;
+}
+.rightul {
+	float:right;list-style-type:none;
+}
+
+@media screen and (max-width: 408px) {
+    .rightul {
+       display:none;
+    }
+}
+
+ul.ex {
+	width:90%;
+}
+@media screen and (max-width: 600px) {
+    ul.ex {
+        width:100%;
+    }
+}
+
+ul.divider li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+ul.divider li:last-child {
+    border-right: none;
+}
+ul.border {
+    border: 1px solid #555;
+}
+
+ul.border li a {
+    padding: 8px 16px;
+}
+
+ul.border li {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+ul.border li:last-child {
+    border-bottom: none;
+}		</style>
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Navigation Bar</span></h1>
+		<hr />
+		<h2>
+			Demo: Navigation Bars</h2>
+		<div class="w3-row">
+			<div class="w3-col m4">
+				<p>
+					Vertical</p>
+				<ul class="vertical ex">
+					<li>
+						<a class="active">Home</a></li>
+					<li>
+						<a>News</a></li>
+					<li>
+						<a>Contact</a></li>
+					<li>
+						<a>About</a></li>
+				</ul>
+			</div>
+			<div class="w3-col m8">
+				<p>
+					Horizontal</p>
+				<ul class="horizontal">
+					<li>
+						<a class="active">Home</a></li>
+					<li>
+						<a>News</a></li>
+					<li>
+						<a>Contact</a>
+						<ul class="rightul">
+							<li>
+								<a>About</a></li>
+						</ul>
+					</li>
+				</ul>
+				<br />
+				<ul class="horizontal gray">
+					<li>
+						<a>Home</a></li>
+					<li>
+						<a>News</a></li>
+					<li>
+						<a class="active">Contact</a>
+						<ul class="rightul">
+							<li>
+								<a>About</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr />
+		<h2>
+			Navigation Bars</h2>
+		<p>
+			Having easy-to-use navigation is important for any web site.</p>
+		<p>
+			With CSS you can transform boring HTML menus into good-looking navigation bars.</p>
+		<hr />
+		<h2>
+			Navigation Bar = List of Links</h2>
+		<p>
+			A navigation bar needs standard HTML as a base.</p>
+		<p>
+			In our examples we will build the navigation bar from a standard HTML list.</p>
+		<p>
+			A navigation bar is basically a list of links, so using the &lt;ul&gt; and &lt;li&gt; elements makes perfect sense:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+				<span class="highLT">&lt;</span><span class="highELE">ul</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">href=</span><span class="highVAL">&quot;default.asp&quot;</span><span class="highGT">&gt;</span>Home<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">href=</span><span class="highVAL">&quot;news.asp&quot;</span><span class="highGT">&gt;</span>News<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">href=</span><span class="highVAL">&quot;contact.asp&quot;</span><span class="highGT">&gt;</span>Contact<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">href=</span><span class="highVAL">&quot;about.asp&quot;</span><span class="highGT">&gt;</span>About<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">/ul</span><span class="highGT">&gt;</span></div>
+		</div>
+		<p>
+			Now let&#39;s remove the bullets and the margins and padding from the list:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-type:</span><span class="highVAL"> none;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 0;</span><br />
+				}</div>
+		</div>
+		<p>
+			Example explained:</p>
+		<ul>
+			<li>
+				<code>list-style-type: none;</code> - Removes the bullets. A navigation bar does not need list markers</li>
+			<li>
+				Set <code>margin: 0;</code> and <code>padding: 0;</code> to remove browser default settings</li>
+		</ul>
+		<p>
+			The code in the example above is the standard code used in both vertical, and horizontal navigation bars.</p>
+		<hr />
+		<h2>
+			Vertical Navigation Bar</h2>
+		<p>
+			To build a vertical navigation bar, you can style the &lt;a&gt; elements inside the list, in addition to the code above:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">li a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> block;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 60px;</span><br />
+				}</div>
+		</div>
+		<p>
+			Example explained:</p>
+		<ul>
+			<li>
+				<code>display: block;</code> - Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify the width (and padding, margin, height, etc. if you want)</li>
+			<li>
+				<code>width: 60px;</code> - Block elements take up the full width available by default. We want to specify a 60 pixels width</li>
+		</ul>
+		<p>
+			You can also set the width of &lt;ul&gt;, and remove the width of &lt;a&gt;, as they will take up the full width available when displayed as block elements. This will produce the same result as our previous example:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-type:</span><span class="highVAL"> none;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 60px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">li a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> block;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Vertical Navigation Bar Examples</h2>
+		<p>
+			Create a basic vertical navigation bar with a gray background color and change the background color of the links when the user moves the mouse over them:</p>
+		<ul class="vertical">
+			<li>
+				<a>Home</a></li>
+			<li>
+				<a>News</a></li>
+			<li>
+				<a>Contact</a></li>
+			<li>
+				<a>About</a></li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-type:</span><span class="highVAL"> none;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 200px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #f1f1f1;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">li a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> block;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #000;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 8px 0 8px 16px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-decoration:</span><span class="highVAL"> none;</span><br />
+				}<br />
+				<br />
+				<span class="highCOM">/* Change the link color on hover */</span><br />
+				<span class="highELE">li a:hover </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #555;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> white;</span><br />
+				}</div>
+		</div>
+		<h3 style="margin-top:35px;">
+			Active/Current Navigation Link</h3>
+		<p>
+			Add an &quot;active&quot; class to the current link to let the user know which page he/she is on:</p>
+		<ul class="vertical">
+			<li>
+				<a class="active">Home</a></li>
+			<li>
+				<a>News</a></li>
+			<li>
+				<a>Contact</a></li>
+			<li>
+				<a>About</a></li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.active </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #4CAF50;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> white;</span><br />
+				}</div>
+		</div>
+		<h3 style="margin-top:35px;">
+			Center Links &amp; Add Borders</h3>
+		<p>
+			Add <code>text-align:center</code> to &lt;li&gt; or &lt;a&gt; to center the links.</p>
+		<p>
+			Add the <code>border</code> property to &lt;ul&gt; add a border around the navbar. If you also want borders inside the navbar, add a <code>border-bottom</code> to all &lt;li&gt; elements, except for the last one:</p>
+		<ul class="vertical border">
+			<li>
+				<a class="active">Home</a></li>
+			<li>
+				<a>News</a></li>
+			<li>
+				<a>Contact</a></li>
+			<li>
+				<a>About</a></li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid #555;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">li </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-bottom:</span><span class="highVAL"> 1px solid #555;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">li:last-child </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-bottom:</span><span class="highVAL"> none;</span><br />
+				}</div>
+		</div>
+		<h3 style="margin-top:35px;">
+			Full-height Fixed Vertical Navbar</h3>
+		<p>
+			Create a full-height, &quot;sticky&quot; side navigation:</p>
+		<p>
+			<iframe src="trycss_navbar_vertical_iframe.htm" style="height:262px;width:100%;border:1px solid #eee;"></iframe></p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-type:</span><span class="highVAL"> none;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 25%;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #f1f1f1;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100%;</span> <span class="highCOM">/* Full height */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> fixed;</span> <span class="highCOM">/* Make it stick, even on scroll */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">overflow:</span><span class="highVAL"> auto;</span> <span class="highCOM">/* Enable scrolling if the sidenav has too much content */</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Horizontal Navigation Bar</h2>
+		<p>
+			There are two ways to create a horizontal navigation bar. Using <b> inline</b> or <b>floating</b> list items.</p>
+		<h3>
+			Inline List Items</h3>
+		<p>
+			One way to build a horizontal navigation bar is to specify the &lt;li&gt; elements as inline, in addition to the &quot;standard&quot; code above:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">li </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> inline;</span><br />
+				}</div>
+		</div>
+		<p>
+			Example explained:</p>
+		<ul>
+			<li>
+				<code>display: inline;</code> - By default, &lt;li&gt; elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line</li>
+		</ul>
+		<h3>
+			Floating List Items</h3>
+		<p>
+			Another way of creating a horizontal navigation bar is to float the &lt;li&gt; elements, and specify a layout for the navigation links:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">li </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">float:</span><span class="highVAL"> left;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> block;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 8px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #dddddd;</span><br />
+				}</div>
+		</div>
+		<p>
+			Example explained:</p>
+		<ul>
+			<li>
+				<code>float: left;</code> - use float to get block elements to slide next to each other</li>
+			<li>
+				<code>display: block;</code> - Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify padding (and height, width, margins, etc. if you want)</li>
+			<li>
+				<code>padding: 8px;</code> - Since block elements take up the full width available, they cannot float next to each other. Therefore, specify some padding to make them look good</li>
+			<li>
+				<code>background-color: #dddddd;</code> - Add a gray background-color to each a element</li>
+		</ul>
+		<p>
+			<strong>Tip:</strong> Add the background-color to &lt;ul&gt; instead of each &lt;a&gt; element if you want a full-width background color:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #dddddd;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Horizontal Navigation Bar Examples</h2>
+		<p>
+			Create a basic horizontal navigation bar with a dark background color and change the background color of the links when the user moves the mouse over them:</p>
+		<ul class="horizontal">
+			<li>
+				<a>Home</a></li>
+			<li>
+				<a>News</a></li>
+			<li>
+				<a>Contact</a></li>
+			<li>
+				<a>About</a></li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-type:</span><span class="highVAL"> none;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">overflow:</span><span class="highVAL"> hidden;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #333;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">li </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">float:</span><span class="highVAL"> left;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">li a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> block;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> white;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 14px 16px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-decoration:</span><span class="highVAL"> none;</span><br />
+				}<br />
+				<br />
+				<span class="highCOM">/* Change the link color to #111 (black) on hover */</span><br />
+				<span class="highELE">li a:hover </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #111;</span><br />
+				}</div>
+		</div>
+		<h3 style="margin-top:35px;">
+			Active/Current Navigation Link</h3>
+		<p>
+			Add an &quot;active&quot; class to the current link to let the user know which page he/she is on:</p>
+		<ul class="horizontal">
+			<li>
+				<a class="active">Home</a></li>
+			<li>
+				<a>News</a></li>
+			<li>
+				<a>Contact</a></li>
+			<li>
+				<a>About</a></li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.active </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #4CAF50;</span><br />
+				}</div>
+		</div>
+		<h3 style="margin-top:35px;">
+			Right-Align Links</h3>
+		<p>
+			Right-align links by adding a new &lt;ul&gt; inside the &lt;ul&gt; with <code>float:right;</code>:</p>
+		<ul class="horizontal">
+			<li>
+				<a href="javascript:void(0)">Home</a></li>
+			<li>
+				<a href="javascript:void(0)">News</a></li>
+			<li>
+				<a href="javascript:void(0)">Contact</a>
+				<ul style="float:right;list-style-type:none;">
+					<li>
+						<a class="active" href="javascript:void(0)">About</a></li>
+					<li>
+						<a href="javascript:void(0)">Login</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+				<span class="highLT">&lt;</span><span class="highELE">ul</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">href=</span><span class="highVAL">&quot;#home&quot;</span><span class="highGT">&gt;</span>Home<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">href=</span><span class="highVAL">&quot;#news&quot;</span><span class="highGT">&gt;</span>News<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">href=</span><span class="highVAL">&quot;#contact&quot;</span><span class="highGT">&gt;</span>Contact<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">ul</span> <span class="highATT">style=</span><span class="highVAL">&quot;float:right;list-style-type:none;&quot;</span><span class="highGT">&gt;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">class=</span><span class="highVAL">&quot;active&quot;</span> <span class="highATT">href=</span><span class="highVAL">&quot;#about&quot;</span><span class="highGT">&gt;</span>About<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highLT">&lt;</span><span class="highELE">li</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">a</span> <span class="highATT">href=</span><span class="highVAL">&quot;#login&quot;</span><span class="highGT">&gt;</span>Login<span class="highLT">&lt;</span><span class="highELE">/a</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/li</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">/ul</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">/ul</span><span class="highGT">&gt;</span></div>
+		</div>
+		<h3 style="margin-top:35px;">
+			Border Dividers</h3>
+		<p>
+			Add the <code>border-right</code> property to &lt;li&gt; to create link dividers:</p>
+		<ul class="horizontal divider">
+			<li>
+				<a class="active" href="javascript:void(0)">Home</a></li>
+			<li>
+				<a href="javascript:void(0)">News</a></li>
+			<li>
+				<a href="javascript:void(0)">Contact</a>
+				<ul style="float:right;list-style-type:none;">
+					<li>
+						<a href="javascript:void(0)">About</a></li>
+					<li>
+						<a href="javascript:void(0)">Login</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highCOM">/* Add a gray right border to all list items, except the last item (last-child) */</span><br />
+				<span class="highELE">li </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-right:</span><span class="highVAL"> 1px solid #bbb;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">li:last-child </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-right:</span><span class="highVAL"> none;</span><br />
+				}</div>
+		</div>
+		<h3 style="margin-top:35px;">
+			Fixed Navigation Bar</h3>
+		<p>
+			Make the navigation bar stay at the top or the bottom of the page, even when the user scrolls the page:</p>
+		<div class="w3-row">
+			<div class="w3-half">
+				<div class="width94">
+					<iframe src="trycss_navbar_horizontal_iframe.htm" style="height:262px;width:100%;border:none;"></iframe>
+					<div class="w3-example">
+						<h3>
+							Fixed Top</h3>
+						<div class="w3-code notranslate cssHigh">
+							<span class="highELE">ul </span>{<br />
+							&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> fixed;</span><br />
+							&nbsp;&nbsp;&nbsp; <span class="highATT">top:</span><span class="highVAL"> 0;</span><br />
+							&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100%;</span><br />
+							}</div>
+					</div>
+				</div>
+			</div>
+			<div class="w3-half">
+				<div class="width94">
+					<iframe src="trycss_navbar_horizontal_iframe2.htm" style="height:262px;width:100%;border:none;"></iframe>
+					<div class="w3-example">
+						<h3>
+							Fixed Bottom</h3>
+						<div class="w3-code notranslate cssHigh">
+							<span class="highELE">ul </span>{<br />
+							&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> fixed;</span><br />
+							&nbsp;&nbsp;&nbsp; <span class="highATT">bottom:</span><span class="highVAL"> 0;</span><br />
+							&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100%;</span><br />
+							}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3 style="margin-top:20px;">
+			Gray Horizontal Navbar</h3>
+		<p>
+			An example of a gray horizontal navigation bar with a thin gray border:</p>
+		<ul class="horizontal2">
+			<li>
+				<a class="active">Home</a></li>
+			<li>
+				<a>News</a></li>
+			<li>
+				<a>Contact</a></li>
+			<li>
+				<a>About</a></li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid #e7e7e7;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #f3f3f3;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">li a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #666;</span><br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

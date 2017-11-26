@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+.floatl:after {
+	font-weight: bold;
+	content: 'Float Left';
+	color:white;
+}
+.floatr:after  {
+	font-weight:bold;
+	content: 'Float Right';	color:white;
+
+}
+@media only screen and (max-width: 500px){
+  .floatl:after  {
+	content: 'Left';
+  }
+  .floatr:after  {
+	content: 'Right';
+  }
+}		</style>
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Layout - float and clear</span></h1>
+		<hr />
+		<p class="intro">
+			The <code>float</code> property specifies whether or not an element should float.</p>
+		<p class="intro">
+			The <code>clear</code> property is used to control the behavior of floating elements.</p>
+		<div style="background-color:#2196F3;padding:20px;float:left;width:30%;opacity:0.7;text-align:center;">
+			<span class="floatl"></span></div>
+		<div style="background-color:#F44336;padding:20px;float:right;width:30%;opacity:0.7;text-align:center;">
+			<span class="floatr"></span></div>
+		<p>
+			<br />
+			<br />
+			&nbsp;</p>
+		<hr style="clear:both;margin-bottom:15px;" />
+		<h2>
+			The float Property</h2>
+		<p>
+			In its simplest use, the <code>float</code> property can be used to wrap text around images.</p>
+		<p>
+			The following example specifies that an image should float to the right in a text:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">img </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">float:</span><span class="highVAL"> right;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0 0 10px 10px;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			The clear Property</h2>
+		<p>
+			The <code>clear</code> property is used to control the behavior of floating elements.</p>
+		<p>
+			Elements after a floating element will flow around it. To avoid this, use the <code>clear</code> property.</p>
+		<p>
+			The <code>clear</code> property specifies on which sides of an element floating elements are not allowed to float:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">clear:</span><span class="highVAL"> left;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			The clearfix Hack - overflow: auto;</h2>
+		<p>
+			If an element is taller than the element containing it, and it is floated, it will overflow outside of its container.</p>
+		<p>
+			Then we can add <code>overflow: auto;</code> to the containing element to fix this problem:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.clearfix </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">overflow:</span><span class="highVAL"> auto;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Web Layout Example</h2>
+		<p>
+			It is common to do entire web layouts using the <code>float</code> property:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 3px solid blue;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">.clearfix </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">overflow:</span><span class="highVAL"> auto;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">nav </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">float:</span><span class="highVAL"> left;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 200px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 3px solid #73AD21;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">section </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin-left:</span><span class="highVAL"> 206px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 3px solid red;</span><br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

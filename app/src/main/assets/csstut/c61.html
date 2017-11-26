@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			Responsive Web Design <span class="color_h1">- Media Queries</span></h1>
+		<hr />
+		<h2>
+			What is a Media Query?</h2>
+		<p>
+			Media query is a CSS technique introduced in CSS3.</p>
+		<p>
+			It uses the <code>@media</code> rule to include a block of CSS properties only if a certain condition is true.</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<p>
+				If the browser window is smaller than 500px, the background color will change to lightblue:</p>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">@media only screen and (max-width: 500px) </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; body </span>{<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> lightblue;</span><br />
+				&nbsp;&nbsp;&nbsp; }<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Add a Breakpoint</h2>
+		<p>
+			Earlier in this tutorial we made a web page with rows and columns, and it was responsive, but it did not look good on a small screen.</p>
+		<p>
+			Media queries can help with that. We can add a breakpoint where certain parts of the design will behave differently on each side of the breakpoint.</p>
+		<div class="row" style="text-align:center;font-weight:bold;font-size:90%;">
+			<div class="col-sm-6">
+				<img src="file:///android_asset/csstut/rwd_desktop.png" style="border:2px solid #dddddd;" /><br />
+				Desktop</div>
+			<div class="col-sm-6">
+				<img src="file:///android_asset/csstut/rwd_phone.png" style="border:2px solid #dddddd;" /><br />
+				Phone</div>
+		</div>
+		<br />
+		<p>
+			Use a media query to add a breakpoint at 768px:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<p>
+				When the screen (browser window) gets smaller than 768px, each column should have a width of 100%:</p>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highCOM">/* For desktop: */</span><br />
+				<span class="highELE">.col-1 </span>{<span class="highATT">width:</span><span class="highVAL"> 8.33%;</span>}<br />
+				<span class="highELE">.col-2 </span>{<span class="highATT">width:</span><span class="highVAL"> 16.66%;</span>}<br />
+				<span class="highELE">.col-3 </span>{<span class="highATT">width:</span><span class="highVAL"> 25%;</span>}<br />
+				<span class="highELE">.col-4 </span>{<span class="highATT">width:</span><span class="highVAL"> 33.33%;</span>}<br />
+				<span class="highELE">.col-5 </span>{<span class="highATT">width:</span><span class="highVAL"> 41.66%;</span>}<br />
+				<span class="highELE">.col-6 </span>{<span class="highATT">width:</span><span class="highVAL"> 50%;</span>}<br />
+				<span class="highELE">.col-7 </span>{<span class="highATT">width:</span><span class="highVAL"> 58.33%;</span>}<br />
+				<span class="highELE">.col-8 </span>{<span class="highATT">width:</span><span class="highVAL"> 66.66%;</span>}<br />
+				<span class="highELE">.col-9 </span>{<span class="highATT">width:</span><span class="highVAL"> 75%;</span>}<br />
+				<span class="highELE">.col-10 </span>{<span class="highATT">width:</span><span class="highVAL"> 83.33%;</span>}<br />
+				<span class="highELE">.col-11 </span>{<span class="highATT">width:</span><span class="highVAL"> 91.66%;</span>}<br />
+				<span class="highELE">.col-12 </span>{<span class="highATT">width:</span><span class="highVAL"> 100%;</span>}<br />
+				<br />
+				<span class="highELE">@media only screen and (max-width: 768px) </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; <span class="highCOM">/* For mobile phones: */</span><br />
+				&nbsp;&nbsp;&nbsp; [class*=&quot;col-&quot;] {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100%;</span><br />
+				&nbsp;&nbsp;&nbsp; }<br />
+				}</span></div>
+		</div>
+		<hr />
+		<h2>
+			Always Design for Mobile First</h2>
+		<p>
+			Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).</p>
+		<p>
+			This means that we must make some changes in our CSS.</p>
+		<p>
+			Instead of changing styles when the width gets <em>smaller</em> than 768px, we should change the design when the width gets <em>larger</em> than 768px. This will make our design Mobile First:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highCOM">/* For mobile phones: */</span><br />
+				<span class="highELE">[class*=&quot;col-&quot;] </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100%;</span><br />
+				}<br />
+				<span class="highELE">@media only screen and (min-width: 768px) </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; <span class="highCOM">/* For desktop: */</span><br />
+				&nbsp;&nbsp;&nbsp; .col-1 {<span class="highATT">width:</span><span class="highVAL"> 8.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-2 </span>{<span class="highATT">width:</span><span class="highVAL"> 16.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-3 </span>{<span class="highATT">width:</span><span class="highVAL"> 25%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-4 </span>{<span class="highATT">width:</span><span class="highVAL"> 33.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-5 </span>{<span class="highATT">width:</span><span class="highVAL"> 41.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-6 </span>{<span class="highATT">width:</span><span class="highVAL"> 50%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-7 </span>{<span class="highATT">width:</span><span class="highVAL"> 58.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-8 </span>{<span class="highATT">width:</span><span class="highVAL"> 66.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-9 </span>{<span class="highATT">width:</span><span class="highVAL"> 75%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-10 </span>{<span class="highATT">width:</span><span class="highVAL"> 83.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-11 </span>{<span class="highATT">width:</span><span class="highVAL"> 91.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-12 </span>{<span class="highATT">width:</span><span class="highVAL"> 100%;</span>}<br />
+				}</span></div>
+		</div>
+		<hr />
+		<h2>
+			Another Breakpoint</h2>
+		<p>
+			You can add as many breakpoints as you like.</p>
+		<p>
+			We will also insert a breakpoint between tablets and mobile phones.</p>
+		<div class="row" style="text-align:center;font-weight:bold;font-size:90%;">
+			<div class="col-sm-6">
+				<img src="file:///android_asset/csstut/rwd_desktop.png" style="border:2px solid #dddddd;" /><br />
+				Desktop</div>
+			<div class="col-sm-4">
+				<img src="file:///android_asset/csstut/rwd_tablet.png" style="border:2px solid #dddddd;" /><br />
+				Tablet</div>
+			<div class="col-sm-2">
+				<img src="file:///android_asset/csstut/rwd_phone.png" style="border:2px solid #dddddd;" /><br />
+				Phone</div>
+		</div>
+		<br />
+		<p>
+			We do this by adding one more media query (at 600px), and a set of new classes for devices larger than 600px (but smaller than 768px):</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<p>
+				Note that the two sets of classes are allmost identical, the only difference is the name (col- and col-m-):</p>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highCOM">/* For mobile phones: */</span><br />
+				<span class="highELE">[class*=&quot;col-&quot;] </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100%;</span><br />
+				}<br />
+				<span class="highELE">@media only screen and (min-width: 600px) </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; <span class="highCOM">/* For tablets: */</span><br />
+				&nbsp;&nbsp;&nbsp; .col-m-1 {<span class="highATT">width:</span><span class="highVAL"> 8.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-m-2 </span>{<span class="highATT">width:</span><span class="highVAL"> 16.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-m-3 </span>{<span class="highATT">width:</span><span class="highVAL"> 25%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-m-4 </span>{<span class="highATT">width:</span><span class="highVAL"> 33.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-m-5 </span>{<span class="highATT">width:</span><span class="highVAL"> 41.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-m-6 </span>{<span class="highATT">width:</span><span class="highVAL"> 50%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-m-7 </span>{<span class="highATT">width:</span><span class="highVAL"> 58.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-m-8 </span>{<span class="highATT">width:</span><span class="highVAL"> 66.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-m-9 </span>{<span class="highATT">width:</span><span class="highVAL"> 75%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-m-10 </span>{<span class="highATT">width:</span><span class="highVAL"> 83.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-m-11 </span>{<span class="highATT">width:</span><span class="highVAL"> 91.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-m-12 </span>{<span class="highATT">width:</span><span class="highVAL"> 100%;</span>}<br />
+				}<br />
+				<span class="highELE">@media only screen and (min-width: 768px) </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; <span class="highCOM">/* For desktop: */</span><br />
+				&nbsp;&nbsp;&nbsp; .col-1 {<span class="highATT">width:</span><span class="highVAL"> 8.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-2 </span>{<span class="highATT">width:</span><span class="highVAL"> 16.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-3 </span>{<span class="highATT">width:</span><span class="highVAL"> 25%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-4 </span>{<span class="highATT">width:</span><span class="highVAL"> 33.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-5 </span>{<span class="highATT">width:</span><span class="highVAL"> 41.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-6 </span>{<span class="highATT">width:</span><span class="highVAL"> 50%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-7 </span>{<span class="highATT">width:</span><span class="highVAL"> 58.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-8 </span>{<span class="highATT">width:</span><span class="highVAL"> 66.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-9 </span>{<span class="highATT">width:</span><span class="highVAL"> 75%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-10 </span>{<span class="highATT">width:</span><span class="highVAL"> 83.33%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-11 </span>{<span class="highATT">width:</span><span class="highVAL"> 91.66%;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; .col-12 </span>{<span class="highATT">width:</span><span class="highVAL"> 100%;</span>}<br />
+				}</span></span></div>
+		</div>
+		<p>
+			It might seem odd that we have two sets of identical classes, but it gives us the opportunity <em>in HTML</em>, to decide what will happen with the columns at each breakpoint:</p>
+		<div class="w3-example">
+			<h3>
+				HTML Example</h3>
+			<p>
+				For desktop:</p>
+			<p>
+				The first and the third section will both span 3 columns each. The middle section will span 6 columns.</p>
+			<p>
+				For tablets:</p>
+			<p>
+				The first section will span 3 columns, the second will span 9, and the third section will be displayed below the first two sections, and it will span 12 columns:</p>
+			<div class="w3-code notranslate htmlHigh">
+				<span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">class=</span><span class="highVAL">&quot;row&quot;</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">class=</span><span class="highVAL">&quot;col-3 col-m-3&quot;</span><span class="highGT">&gt;</span>...<span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">class=</span><span class="highVAL">&quot;col-6 col-m-9&quot;</span><span class="highGT">&gt;</span>...<span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">class=</span><span class="highVAL">&quot;col-3 col-m-12&quot;</span><span class="highGT">&gt;</span>...<span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span></div>
+		</div>
+		<hr />
+		<h2>
+			Orientation: Portrait / Landscape</h2>
+		<p>
+			Media queries can also be used to change layout of a page depending on the orientation of the browser.</p>
+		<p>
+			You can have a set of CSS properties that will only apply when the browser window is wider than its height, a so called &quot;Landscape&quot; orientation:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<p>
+				The web page will have a lightblue background if the orientation is in landscape mode:</p>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">@media only screen and (orientation: landscape) </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; body </span>{<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> lightblue;</span><br />
+				&nbsp;&nbsp;&nbsp; }<br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

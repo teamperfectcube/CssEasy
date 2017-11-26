@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Syntax and Selectors</span></h1>
+		<hr />
+		<h2>
+			CSS Syntax</h2>
+		<p>
+			A CSS rule-set consists of a selector and a declaration block:</p>
+		<p>
+			<img alt="CSS selector" class="img-responsive" src="file:///android_asset/csstut/selector.gif" style="width:100%;height:auto;" /></p>
+		<p>
+			The selector points to the HTML element you want to style.</p>
+		<p>
+			The declaration block contains one or more declarations separated by semicolons.</p>
+		<p>
+			Each declaration includes a CSS property name and a value, separated by a colon.</p>
+		<p>
+			A CSS declaration always ends with a semicolon, and declaration blocks are surrounded by curly braces.</p>
+		<p>
+			In the following example all &lt;p&gt; elements will be center-aligned, with a red text color:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			CSS Selectors</h2>
+		<p>
+			CSS selectors are used to &quot;find&quot; (or select) HTML elements based on their element name, id, class, attribute, and more.</p>
+		<hr />
+		<h2>
+			The element Selector</h2>
+		<p>
+			The element selector selects elements based on the element name.</p>
+		<p>
+			You can select all &lt;p&gt; elements on a page like this (in this case, all &lt;p&gt; elements will be center-aligned, with a red text color):</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> red;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			The id Selector</h2>
+		<p>
+			The id selector uses the id attribute of an HTML element to select a specific element.</p>
+		<p>
+			The id of an element should be unique within a page, so the id selector is used to select one unique element!</p>
+		<p>
+			To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+		<p>
+			The style rule below will be applied to the HTML element with id=&quot;para1&quot;:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">#para1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> red;</span><br />
+				}</div>
+		</div>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<strong>Note:</strong> An id name cannot start with a number!</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<h2>
+			The class Selector</h2>
+		<p>
+			The class selector selects elements with a specific class attribute.</p>
+		<p>
+			To select elements with a specific class, write a period (.) character, followed by the name of the class.</p>
+		<p>
+			In the example below, all HTML elements with class=&quot;center&quot; will be red and center-aligned:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.center </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> red;</span><br />
+				}</div>
+		</div>
+		<p>
+			You can also specify that only specific HTML elements should be affected by a class.</p>
+		<p>
+			In the example below, only &lt;p&gt; elements with class=&quot;center&quot; will be center-aligned:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p.center </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> red;</span><br />
+				}</div>
+		</div>
+		<p>
+			HTML elements can also refer to more than one class.</p>
+		<p>
+			In the example below, the &lt;p&gt; element wil be styled according to class=&quot;center&quot; and to class=&quot;large&quot;:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+				<span class="highLT">&lt;</span><span class="highELE">p</span> <span class="highATT">class=</span><span class="highVAL">&quot;center large&quot;</span><span class="highGT">&gt;</span>This paragraph refers to two classes.<span class="highLT">&lt;</span><span class="highELE">/p</span><span class="highGT">&gt;</span></div>
+		</div>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<strong>Note:</strong> A class name cannot start with a number!</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<h2>
+			Grouping Selectors</h2>
+		<p>
+			If you have elements with the same style definitions, like this:</p>
+		<div class="w3-example">
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">h1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> red;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">h2 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> red;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> red;</span><br />
+				}</div>
+		</div>
+		<p>
+			It will be better to group the selectors, to minimize the code.</p>
+		<p>
+			To group selectors, separate each selector with a comma.</p>
+		<p>
+			In the example below we have grouped the selectors from the code above:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">h1, h2, p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> red;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			CSS Comments</h2>
+		<p>
+			Comments are used to explain the code, and may help when you edit the source code at a later date.</p>
+		<p>
+			Comments are ignored by browsers.</p>
+		<p>
+			A CSS comment starts with /* and ends with */. Comments can also span multiple lines:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highCOM">/* This is a single-line comment */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				}<br />
+				<br />
+				<span class="highCOM">/* This is<br />
+				a multi-line<br />
+				comment */</span></div>
+		</div>
+	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>
