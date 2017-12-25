@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+#rotate2D,#rotate3D {
+    width: 80px;
+    height: 70px;
+    color: white;
+    position:relative;
+    font-weight:bold;
+    font-size:15px;
+    padding:10px;
+    float:left;
+    margin-right:50px;
+    border-radius:5px;
+    border:1px solid #000000;
+    background:red;
+    margin:10px;
+}		</style>
+		<script>
+<!--
+var x,y,n=0,ny=0,rotINT,rotYINT
+function rotateDIV()
+{
+x=document.getElementById("rotate2D")
+clearInterval(rotINT)
+rotINT=setInterval("startRotate()",10)
+}
+function rotateYDIV()
+{
+y=document.getElementById("rotate3D")
+clearInterval(rotYINT)
+rotYINT=setInterval("startYRotate()",10)
+}
+function startRotate()
+{
+n=n+1
+x.style.transform="rotate(" + n + "deg)"
+x.style.webkitTransform="rotate(" + n + "deg)"
+x.style.OTransform="rotate(" + n + "deg)"
+x.style.MozTransform="rotate(" + n + "deg)"
+if (n==180 || n==360)
+	{
+	clearInterval(rotINT)
+	if (n==360){n=0}
+	}
+}
+function startYRotate()
+{
+ny=ny+1
+y.style.transform="rotateY(" + ny + "deg)"
+y.style.webkitTransform="rotateY(" + ny + "deg)"
+y.style.OTransform="rotateY(" + ny + "deg)"
+y.style.MozTransform="rotateY(" + ny + "deg)"
+if (ny==180 || ny>=360)
+	{
+	clearInterval(rotYINT)
+	if (ny>=360){ny=0}
+	}
+}
+//-->
+</script>
+	</head>
+	<body>
+		<h1>
+			CSS3 <span class="color_h1">3D Transforms</span></h1>
+		<hr />
+		<h2>
+			CSS3 3D Transforms</h2>
+		<p>
+			CSS3 allows you to format your elements using 3D transformations.</p>
+		<p>
+			Mouse over the elements below to see the difference between a 2D and a 3D transformation:</p>
+		<div style="height:80px;">
+			<div onmouseover="rotateDIV()" id="rotate2D">2D rotate</div>
+			<div onmouseover="rotateYDIV()" id="rotate3D">3D rotate</div>
+		</div>
+		<hr />
+		<h2>
+			Browser Support for 3D Transforms</h2>
+		<p>
+			The numbers in the table specify the first browser version that fully supports the property.</p>
+		<p>
+			Numbers followed by -webkit-, -moz-, or -o- specify the first version that worked with a prefix.</p>
+		<div class="w3-responsive">
+			<table class="browserref notranslate">
+				<tbody>
+					<tr>
+						<th style="width:22%;font-size:16px;text-align:left;">
+							Property</th>
+						<th class="bsChrome" style="width:13%;" title="Chrome">
+							&nbsp;</th>
+						<th class="bsIE" style="width:13%;" title="Internet Explorer">
+							&nbsp;</th>
+						<th class="bsFirefox" style="width:13%;" title="Firefox">
+							&nbsp;</th>
+						<th class="bsSafari" style="width:13%;" title="Safari">
+							&nbsp;</th>
+						<th class="bsOpera" style="width:13%;" title="Opera">
+							&nbsp;</th>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							transform</td>
+						<td>
+							36.0<br />
+							12.0&nbsp;-webkit-</td>
+						<td>
+							10.0</td>
+						<td>
+							16.0<br />
+							10.0&nbsp;-moz-</td>
+						<td>
+							4.0&nbsp;-webkit-</td>
+						<td>
+							23.0<br />
+							15.0&nbsp;-webkit-</td>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							transform-origin<br />
+							(three-value syntax)</td>
+						<td>
+							36.0<br />
+							12.0&nbsp;-webkit-</td>
+						<td>
+							10.0</td>
+						<td>
+							16.0<br />
+							10.0&nbsp;-moz-</td>
+						<td>
+							4.0&nbsp;-webkit-</td>
+						<td>
+							23.0<br />
+							15.0&nbsp;-webkit-</td>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							transform-style</td>
+						<td>
+							36.0<br />
+							12.0&nbsp;-webkit-</td>
+						<td>
+							11.0</td>
+						<td>
+							16.0<br />
+							10.0&nbsp;-moz-</td>
+						<td>
+							4.0&nbsp;-webkit-</td>
+						<td>
+							23.0<br />
+							15.0&nbsp;-webkit-</td>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							perspective</td>
+						<td>
+							36.0<br />
+							12.0&nbsp;-webkit-</td>
+						<td>
+							10.0</td>
+						<td>
+							16.0<br />
+							10.0&nbsp;-moz-</td>
+						<td>
+							4.0&nbsp;-webkit-</td>
+						<td>
+							23.0<br />
+							15.0&nbsp;-webkit-</td>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							perspective-origin</td>
+						<td>
+							36.0<br />
+							12.0&nbsp;-webkit-</td>
+						<td>
+							10.0</td>
+						<td>
+							16.0<br />
+							10.0&nbsp;-moz-</td>
+						<td>
+							4.0&nbsp;-webkit-</td>
+						<td>
+							23.0<br />
+							15.0&nbsp;-webkit-</td>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							backface-visibility</td>
+						<td>
+							36.0<br />
+							12.0&nbsp;-webkit-</td>
+						<td>
+							10.0</td>
+						<td>
+							16.0<br />
+							10.0&nbsp;-moz-</td>
+						<td>
+							4.0&nbsp;-webkit-</td>
+						<td>
+							23.0<br />
+							15.0&nbsp;-webkit-</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr />
+		<h2>
+			CSS3 3D Transforms</h2>
+		<p>
+			In this chapter you will learn about the following 3D transformation methods:</p>
+		<ul>
+			<li>
+				<code>rotateX()</code></li>
+			<li>
+				<code>rotateY()</code></li>
+			<li>
+				<code>rotateZ()</code></li>
+		</ul>
+		<hr />
+		<h2>
+			The rotateX() Method</h2>
+		<p>
+			<img alt="Rotate X" src="file:///android_asset/csstut/transform_rotatex.gif" /></p>
+		<p>
+			<br />
+			&nbsp;</p>
+		<p>
+			The <code>rotateX()</code> method rotates an element around its X-axis at a given degree:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-webkit-transform:</span><span class="highVAL"> rotateX(150deg);</span> <span class="highCOM">/* Safari */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">transform:</span><span class="highVAL"> rotateX(150deg);</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			The rotateY() Method</h2>
+		<p>
+			<img alt="Rotate Y" src="file:///android_asset/csstut/transform_rotatey.gif" /></p>
+		<br />
+		<br />
+		<p>
+			The <code>rotateY()</code> method rotates an element around its Y-axis at a given degree:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-webkit-transform:</span><span class="highVAL"> rotateY(130deg);</span> <span class="highCOM">/* Safari */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">transform:</span><span class="highVAL"> rotateY(130deg);</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			The rotateZ() Method</h2>
+		<p>
+			The <code>rotateZ()</code> method rotates an element around its Z-axis at a given degree:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">-webkit-transform:</span><span class="highVAL"> rotateZ(90deg);</span> <span class="highCOM">/* Safari */</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">transform:</span><span class="highVAL"> rotateZ(90deg);</span><br />
+				}</div>
+		</div>
+	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>

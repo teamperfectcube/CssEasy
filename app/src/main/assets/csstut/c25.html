@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Pseudo-elements</span></h1>
+		<hr />
+		<h2>
+			What are Pseudo-Elements?</h2>
+		<p>
+			A CSS pseudo-element is used to style specified parts of an element.</p>
+		<p>
+			For example, it can be used to:</p>
+		<ul>
+			<li>
+				Style the first letter, or line, of an element</li>
+			<li>
+				Insert content before, or after, the content of an element</li>
+		</ul>
+		<hr />
+		<h2>
+			Syntax</h2>
+		<p>
+			The syntax of pseudo-elements:</p>
+		<div class="w3-example">
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">selector::pseudo-element </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">property:</span><span class="highVAL">value;</span><br />
+				}</div>
+		</div>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<strong>Notice the double colon notation - </strong> <code>::first-line</code> versus <code>:first-line</code><br />
+						<br />
+						The double colon replaced the single-colon notation for pseudo-elements in CSS3. This was an attempt from W3C to distinguish between <strong>pseudo-classes</strong> and <strong>pseudo-elements</strong>.<br />
+						<br />
+						The single-colon syntax was used for both pseudo-classes and pseudo-elements in CSS2 and CSS1.<br />
+						<br />
+						For backward compatibility, the single-colon syntax is acceptable for CSS2 and CSS1 pseudo-elements.</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<h2>
+			The ::first-line Pseudo-element</h2>
+		<p>
+			The <code>::first-line</code> pseudo-element is used to add a special style to the first line of a text.</p>
+		<p>
+			The following example formats the first line of the text in all &lt;p&gt; elements:</p>
+		<div class="w3-example">
+			<h3>
+				Example&nbsp;</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p::first-line </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #ff0000;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">font-variant:</span><span class="highVAL"> small-caps;</span><br />
+				}</div>
+		</div>
+		<p>
+			<strong>Note:</strong> The <code>::first-line</code> pseudo-element can only be applied to block-level elements.</p>
+		<p>
+			The following properties apply to the <code>::first-line</code> pseudo-element:</p>
+		<ul>
+			<li>
+				font properties</li>
+			<li>
+				color properties</li>
+			<li>
+				background properties</li>
+			<li>
+				word-spacing</li>
+			<li>
+				letter-spacing</li>
+			<li>
+				text-decoration</li>
+			<li>
+				vertical-align</li>
+			<li>
+				text-transform</li>
+			<li>
+				line-height</li>
+			<li>
+				clear</li>
+		</ul>
+		<hr />
+		<h2>
+			The ::first-letter Pseudo-element</h2>
+		<p>
+			The <code>::first-letter</code> pseudo-element is used to add a special style to the first letter of a text.</p>
+		<p>
+			The following example formats the first letter of the text in all &lt;p&gt; elements:&nbsp;</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p::first-letter </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #ff0000;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">font-size:</span><span class="highVAL"> xx-large;</span><br />
+				}</div>
+		</div>
+		<p>
+			<strong>Note:</strong> The <code>::first-letter</code> pseudo-element can only be applied to block-level elements.</p>
+		<p>
+			The following properties apply to the ::first-letter pseudo- element:&nbsp;</p>
+		<ul>
+			<li>
+				font properties</li>
+			<li>
+				color properties&nbsp;</li>
+			<li>
+				background properties</li>
+			<li>
+				margin properties</li>
+			<li>
+				padding properties</li>
+			<li>
+				border properties</li>
+			<li>
+				text-decoration</li>
+			<li>
+				vertical-align (only if &quot;float&quot; is &quot;none&quot;)</li>
+			<li>
+				text-transform</li>
+			<li>
+				line-height</li>
+			<li>
+				float</li>
+			<li>
+				clear</li>
+		</ul>
+		<hr />
+		<h2>
+			Pseudo-elements and CSS Classes</h2>
+		<p>
+			Pseudo-elements can be combined with CSS classes:&nbsp;</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p.intro::first-letter </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #ff0000;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">font-size:</span><span class="highVAL">200%;</span><br />
+				}</div>
+		</div>
+		<p>
+			The example above will display the first letter of paragraphs with class=&quot;intro&quot;, in red and in a larger size.</p>
+		<hr />
+		<h2>
+			Multiple Pseudo-elements</h2>
+		<p>
+			Several pseudo-elements can also be combined.</p>
+		<p>
+			In the following example, the first letter of a paragraph will be red, in an xx-large font size. The rest of the first line will be blue, and in small-caps. The rest of the paragraph will be the default font size and color:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p::first-letter </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #ff0000;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">font-size:</span><span class="highVAL"> xx-large;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p::first-line </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #0000ff;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">font-variant:</span><span class="highVAL"> small-caps;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			CSS - The ::before Pseudo-element</h2>
+		<p>
+			The <code>::before</code> pseudo-element can be used to insert some content before the content of an element.</p>
+		<p>
+			The following example inserts an image before the content of each &lt;h1&gt; element:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">h1::before </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">content:</span><span class="highVAL"> url(smiley.gif);</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			CSS - The ::after Pseudo-element</h2>
+		<p>
+			The <code>::after</code> pseudo-element can be used to insert some content after the content of an element.</p>
+		<p>
+			The following example inserts an image after the content of each &lt;h1&gt; element:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">h1::after </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">content:</span><span class="highVAL"> url(smiley.gif);</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			CSS - The ::selection Pseudo-element</h2>
+		<p>
+			The <code>::selection</code> pseudo-element matches the portion of an element that is selected by a user.</p>
+		<p>
+			The following CSS properties can be applied to <code>::selection</code>: <code>color</code>, <code>background</code>, <code>cursor</code>, and <code>outline</code>.</p>
+		<p>
+			The following example makes the selected text red on a yellow background:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">::selection </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> yellow;</span><br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

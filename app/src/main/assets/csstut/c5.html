@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Backgrounds</span></h1>
+		<div style="width:100%;border:1px solid gray;padding:8px;background:#e1efbb url('mountain.jpg')">
+			<p style="margin-right:150px;">
+				The CSS background properties are used to define the background effects for elements.</p>
+			<p>
+				CSS background properties:</p>
+			<ul>
+				<li>
+					background-color</li>
+				<li>
+					background-image</li>
+				<li>
+					background-repeat</li>
+				<li>
+					background-attachment</li>
+				<li>
+					background-position</li>
+			</ul>
+		</div>
+		<hr />
+		<h2>
+			Background Color</h2>
+		<p>
+			The <code>background-color</code> property specifies the background color of an element.</p>
+		<p>
+			The background color of a page is set like this:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> lightblue;</span><br />
+				}</div>
+		</div>
+		<p>
+			With CSS, a color is most often specified by:</p>
+		<ul>
+			<li>
+				a valid color name - like &quot;red&quot;</li>
+			<li>
+				a HEX value - like &quot;#ff0000&quot;</li>
+			<li>
+				an RGB value - like &quot;rgb(255,0,0)&quot;</li>
+		</ul>
+		<p>
+			In the example below, the &lt;h1&gt;, &lt;p&gt;, and &lt;div&gt; elements have different background colors:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">h1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> green;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> lightblue;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> yellow;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Background Image</h2>
+		<p>
+			The <code>background-image</code> property specifies an image to use as the background of an element.</p>
+		<p>
+			By default, the image is repeated so it covers the entire element.</p>
+		<p>
+			The background image for a page can be set like this:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-image:</span><span class="highVAL"> url(&quot;paper.gif&quot;);</span><br />
+				}</div>
+		</div>
+		<p>
+			Below is an example of a bad combination of text and background image. The text is hardly readable:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-image:</span><span class="highVAL"> url(&quot;bgdesert.jpg&quot;);</span><br />
+				}</div>
+		</div>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<b>Note:</b> When using a background image, use an image that does not disturb the text.</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<h2>
+			Background Image - Repeat Horizontally or Vertically</h2>
+		<p>
+			By default, the <code>background-image</code> property repeats an image both horizontally and vertically.</p>
+		<p>
+			Some images should be repeated only horizontally or vertically, or they will look strange, like this:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-image:</span><span class="highVAL"> url(&quot;gradient_bg.png&quot;);</span><br />
+				}</div>
+		</div>
+		<p>
+			If the image above is repeated only horizontally (<code>background-repeat: repeat-x;</code>), the background will look better:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-image:</span><span class="highVAL"> url(&quot;gradient_bg.png&quot;);</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-repeat:</span><span class="highVAL"> repeat-x;</span><br />
+				}</div>
+		</div>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<b>Note:</b> To repeat an image vertically set <code>background-repeat: repeat-y;</code></td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<h2>
+			Background Image - Set position and no-repeat</h2>
+		<p>
+			Showing the background image only once is also specified by the <code>background-repeat</code> property:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-image:</span><span class="highVAL"> url(&quot;img_tree.png&quot;);</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-repeat:</span><span class="highVAL"> no-repeat;</span><br />
+				}</div>
+		</div>
+		<p>
+			In the example above, the background image is shown in the same place as the text. We want to change the position of the image, so that it does not disturb the text too much.</p>
+		<p>
+			The position of the image is specified by the <code>background-position</code> property:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-image:</span><span class="highVAL"> url(&quot;img_tree.png&quot;);</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-repeat:</span><span class="highVAL"> no-repeat;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-position:</span><span class="highVAL"> right top;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Background Image - Fixed position</h2>
+		<p>
+			To specify that the background image should be fixed (will not scroll with the rest of the page), use the <code>background-attachment</code> property:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-image:</span><span class="highVAL"> url(&quot;img_tree.png&quot;);</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-repeat:</span><span class="highVAL"> no-repeat;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-position:</span><span class="highVAL"> right top;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-attachment:</span><span class="highVAL"> fixed;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Background - Shorthand property</h2>
+		<p>
+			To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.</p>
+		<p>
+			The shorthand property for background is <code>background</code>:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> #ffffff url(&quot;img_tree.png&quot;) no-repeat right top;</span><br />
+				}</div>
+		</div>
+		<p>
+			When using the shorthand property the order of the property values is:</p>
+		<ul>
+			<li>
+				<code>background-color</code></li>
+			<li>
+				<code>background-image</code></li>
+			<li>
+				<code>background-repeat</code></li>
+			<li>
+				<code>background-attachment</code></li>
+			<li>
+				<code>background-position</code></li>
+		</ul>
+		<p>
+			It does not matter if one of the property values is missing, as long as the other ones are in this order.</p>
+	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>

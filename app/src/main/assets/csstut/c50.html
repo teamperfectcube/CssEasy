@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+.pagination,.pagination2,.pagination3 {
+  display: inline-block;
+  padding: 0;
+  margin: 8px 0;
+}
+.pagination li,.pagination2 li,.pagination3 li {display: inline;}
+.pagination li a, .pagination2 li a,.pagination3 li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.border li a {
+  transition: background-color .3s;
+  border:1px solid #ddd;
+}
+.size li a {font-size:22px;}
+.btnround li a {border-radius: 5px;}
+.hover li a {transition: background-color .3s;}
+.margin li a {margin:0 4px;}
+.pagination3 li:first-child a {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.pagination3 li:last-child a {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+ul.pagination2 li a.active, ul.pagination3 li a.active {
+  background-color: #4CAF50;
+  color: white;
+  border:1px solid #4CAF50;
+}
+ul.pagination2 li a:hover:not(.active),
+ul.pagination3 li a:hover:not(.active) {background-color: #ddd;}
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+ul.breadcrumb li {display: inline;}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}		</style>
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Pagination Examples</span></h1>
+		<hr />
+		<p class="intro">
+			Learn how to create a responsive pagination using CSS.</p>
+		<hr />
+		<h2>
+			Simple Pagination</h2>
+		<p>
+			If you have a website with lots of pages, you may wish to add some sort of pagination to each page:</p>
+		<ul class="pagination">
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&laquo;</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">1</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">2</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">3</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">4</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">5</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">6</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">7</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&raquo;</a></li>
+		</ul>
+		<p>
+			To create a pagination, style a HTML list:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul.pagination </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> inline-block;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">ul.pagination li </span>{<span class="highATT">display:</span><span class="highVAL"> inline;</span>}<br />
+				<br />
+				<span class="highELE">ul.pagination li a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> black;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">float:</span><span class="highVAL"> left;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 8px 16px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-decoration:</span><span class="highVAL"> none;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Active and Hoverable Pagination</h2>
+		<ul class="pagination2">
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&laquo;</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">1</a></li>
+			<li>
+				<a class="active" href="file:///android_asset/csstut/c50.html#" style="border:none !important;">2</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">3</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">4</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">5</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">6</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">7</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&raquo;</a></li>
+		</ul>
+		<p>
+			Highlight the current page with an <code>.active</code> class, and use the <code>:hover</code> selector to change the color of each page link when moving the mouse over them:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul.pagination li a.active </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #4CAF50;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> white;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">ul.pagination li a:hover:not(.active) </span>{<span class="highATT">background-color:</span><span class="highVAL"> #ddd;</span>}</div>
+		</div>
+		<h3 style="margin-top:35px;">
+			Rounded Active and Hoverable Buttons</h3>
+		<ul class="pagination2 btnround">
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&laquo;</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">1</a></li>
+			<li>
+				<a class="active" href="file:///android_asset/csstut/c50.html#" style="border:none !important;border-radius:5px;">2</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">3</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">4</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">5</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">6</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">7</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&raquo;</a></li>
+		</ul>
+		<p>
+			Add the <code>border-radius</code> property if you want a rounded &quot;active&quot; and &quot;hover&quot; button:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul.pagination li a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-radius:</span><span class="highVAL"> 5px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">ul.pagination li a.active </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-radius:</span><span class="highVAL"> 5px;</span><br />
+				}</div>
+		</div>
+		<h3 style="margin-top:35px;">
+			Hoverable Transition Effect</h3>
+		<ul class="pagination2 hover">
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&laquo;</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">1</a></li>
+			<li>
+				<a class="active" href="file:///android_asset/csstut/c50.html#" style="border:none !important;">2</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">3</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">4</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">5</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">6</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">7</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&raquo;</a></li>
+		</ul>
+		<p>
+			Add the <code>transition</code> property to the page links to create a transition effect on hover:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul.pagination li a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">transition:</span><span class="highVAL"> background-color .3s;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Bordered Pagination</h2>
+		<ul class="pagination2 border">
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&laquo;</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">1</a></li>
+			<li>
+				<a class="active" href="file:///android_asset/csstut/c50.html#">2</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">3</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">4</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">5</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">6</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">7</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&raquo;</a></li>
+		</ul>
+		<p>
+			Use the <code>border</code> property to add borders to the pagination:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul.pagination li a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid #ddd;</span> <span class="highCOM">/* Gray */</span><br />
+				}</div>
+		</div>
+		<h3 style="margin-top:35px;">
+			Rounded Borders</h3>
+		<p>
+			<strong>Tip:</strong> Add rounded borders to your first and last link in the pagination:</p>
+		<ul class="pagination3 border">
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&laquo;</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">1</a></li>
+			<li>
+				<a class="active" href="file:///android_asset/csstut/c50.html#">2</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">3</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">4</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">5</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">6</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">7</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&raquo;</a></li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.pagination li:first-child a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-top-left-radius:</span><span class="highVAL"> 5px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-bottom-left-radius:</span><span class="highVAL"> 5px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">.pagination li:last-child a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-top-right-radius:</span><span class="highVAL"> 5px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-bottom-right-radius:</span><span class="highVAL"> 5px;</span><br />
+				}</div>
+		</div>
+		<h3 style="margin-top:35px;">
+			Space Between Links</h3>
+		<p>
+			<strong>Tip:</strong> Add the <code>margin</code> property if you do not want to group the page links:</p>
+		<ul class="pagination2 border margin">
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&laquo;</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">1</a></li>
+			<li>
+				<a class="active" href="file:///android_asset/csstut/c50.html#">2</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">3</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">4</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">5</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">6</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">7</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&raquo;</a></li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul.pagination li a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0 4px;</span> <span class="highCOM">/* 0 is for top and bottom. Feel free to change it */</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Pagination Size</h2>
+		<ul class="pagination2 border size">
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&laquo;</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">1</a></li>
+			<li>
+				<a class="active" href="file:///android_asset/csstut/c50.html#">2</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">3</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">4</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">5</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">6</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">7</a></li>
+			<li>
+				<a href="file:///android_asset/csstut/c50.html#">&raquo;</a></li>
+		</ul>
+		<p>
+			Change the size of the pagination with the <code>font-size</code> property:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul.pagination li a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">font-size:</span><span class="highVAL"> 22px;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Centered Pagination</h2>
+		<div style="text-align:center;">
+			<ul class="pagination2 border">
+				<li>
+					<a href="file:///android_asset/csstut/c50.html#">&laquo;</a></li>
+				<li>
+					<a href="file:///android_asset/csstut/c50.html#">1</a></li>
+				<li>
+					<a class="active" href="file:///android_asset/csstut/c50.html#">2</a></li>
+				<li>
+					<a href="file:///android_asset/csstut/c50.html#">3</a></li>
+				<li>
+					<a href="file:///android_asset/csstut/c50.html#">4</a></li>
+				<li>
+					<a href="file:///android_asset/csstut/c50.html#">5</a></li>
+				<li>
+					<a href="file:///android_asset/csstut/c50.html#">6</a></li>
+				<li>
+					<a href="file:///android_asset/csstut/c50.html#">7</a></li>
+				<li>
+					<a href="file:///android_asset/csstut/c50.html#">&raquo;</a></li>
+			</ul>
+		</div>
+		<p>
+			To center the pagination, wrap a container element around it (like &lt;div&gt;), and add <code>text-align:center</code></p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div.center </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-align:</span><span class="highVAL"> center;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Breadcrumbs</h2>
+		<ul class="breadcrumb">
+			<li>
+				<a href="javascript:void(0)">Home</a></li>
+			<li>
+				<a href="javascript:void(0)">Pictures</a></li>
+			<li>
+				<a href="javascript:void(0)">Summer 15</a></li>
+			<li>
+				Italy</li>
+		</ul>
+		<p>
+			Another variation of pagination is so-called &quot;breadcrumbs&quot;:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				ul.breadcrumb {<br />
+				&nbsp;&nbsp;&nbsp; padding: 8px 16px;<br />
+				&nbsp;&nbsp;&nbsp; list-style: none;<br />
+				&nbsp;&nbsp;&nbsp; background-color: #eee;<br />
+				}<br />
+				<br />
+				ul.breadcrumb li {display: inline;}<br />
+				<br />
+				ul.breadcrumb li+li:before {<br />
+				&nbsp;&nbsp;&nbsp; padding: 8px;<br />
+				&nbsp;&nbsp;&nbsp; color: black;<br />
+				&nbsp;&nbsp;&nbsp; content: &quot;/\00a0&quot;;<br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

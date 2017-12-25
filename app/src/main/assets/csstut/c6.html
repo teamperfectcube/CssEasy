@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Borders</span></h1>
+		<div style="width:100%;border:15px groove #73AD21;padding:10px;">
+			<h2>
+				CSS Border Properties</h2>
+			<p>
+				The CSS border properties allow you to specify the style, width, and color of an element&#39;s border.</p>
+			<p>
+				This element has a groove border that is 15px wide and green.</p>
+		</div>
+		<hr />
+		<h2>
+			Border Style</h2>
+		<p>
+			The <code>border-style</code> property specifies what kind of border to display.</p>
+		<p>
+			The following values are allowed:</p>
+		<ul>
+			<li>
+				<code>dotted</code> - Defines a dotted border</li>
+			<li>
+				<code>dashed</code> - Defines a dashed border</li>
+			<li>
+				<code>solid</code> - Defines a solid border</li>
+			<li>
+				<code>double</code> - Defines a double border</li>
+			<li>
+				<code>groove</code> - Defines a 3D grooved border. The effect depends on the border-color value</li>
+			<li>
+				<code>ridge</code> - Defines a 3D ridged border. The effect depends on the border-color value</li>
+			<li>
+				<code>inset</code> - Defines a 3D inset border. The effect depends on the border-color value</li>
+			<li>
+				<code>outset</code> - Defines a 3D outset border. The effect depends on the border-color value</li>
+			<li>
+				<code>none</code> - Defines no border</li>
+			<li>
+				<code>hidden</code> - Defines a hidden border</li>
+		</ul>
+		<p>
+			The <code>border-style</code> property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p.dotted </span>{<span class="highATT">border-style:</span><span class="highVAL"> dotted;</span>}<br />
+				<span class="highELE">p.dashed </span>{<span class="highATT">border-style:</span><span class="highVAL"> dashed;</span>}<br />
+				<span class="highELE">p.solid </span>{<span class="highATT">border-style:</span><span class="highVAL"> solid;</span>}<br />
+				<span class="highELE">p.double </span>{<span class="highATT">border-style:</span><span class="highVAL"> double;</span>}<br />
+				<span class="highELE">p.groove </span>{<span class="highATT">border-style:</span><span class="highVAL"> groove;</span>}<br />
+				<span class="highELE">p.ridge </span>{<span class="highATT">border-style:</span><span class="highVAL"> ridge;</span>}<br />
+				<span class="highELE">p.inset </span>{<span class="highATT">border-style:</span><span class="highVAL"> inset;</span>}<br />
+				<span class="highELE">p.outset </span>{<span class="highATT">border-style:</span><span class="highVAL"> outset;</span>}<br />
+				<span class="highELE">p.none </span>{<span class="highATT">border-style:</span><span class="highVAL"> none;</span>}<br />
+				<span class="highELE">p.hidden </span>{<span class="highATT">border-style:</span><span class="highVAL"> hidden;</span>}<br />
+				<span class="highELE">p.mix </span>{<span class="highATT">border-style:</span><span class="highVAL"> dotted dashed solid double;</span>}</div>
+			<p>
+				Result:</p>
+			<div class="w3-code notranslate">
+				<p style="border-style: dotted;">
+					A dotted border.</p>
+				<p style="border-style: dashed;">
+					A dashed border.</p>
+				<p style="border-style: solid;">
+					A solid border.</p>
+				<p style="border-style: double;">
+					A double border.</p>
+				<p style="border-style: groove;">
+					A groove border. The effect depends on the border-color value.</p>
+				<p style="border-style: ridge;">
+					A ridge border. The effect depends on the border-color value.</p>
+				<p style="border-style: inset;">
+					An inset border. The effect depends on the border-color value.</p>
+				<p style="border-style: outset;">
+					An outset border. The effect depends on the border-color value.</p>
+				<p style="border-style: none;">
+					No border.</p>
+				<p style="border-style: hidden;">
+					A hidden border.</p>
+				<p style="border-style: dotted dashed solid double;">
+					A mixed border.</p>
+			</div>
+		</div>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<b>Note:</b> None of the OTHER CSS border properties described below will have ANY effect unless the <code>border-style</code> property is set!</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<h2>
+			Border Width</h2>
+		<p>
+			The <code>border-width</code> property specifies the width of the four borders.</p>
+		<p>
+			The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick.</p>
+		<p>
+			The <code>border-width</code> property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p.one </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-style:</span><span class="highVAL"> solid;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-width:</span><span class="highVAL"> 5px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.two </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-style:</span><span class="highVAL"> solid;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-width:</span><span class="highVAL"> medium;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.three </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-style:</span><span class="highVAL"> solid;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-width:</span><span class="highVAL"> 2px 10px 4px 20px;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Border Color</h2>
+		<p>
+			The <code>border-color</code> property is used to set the color of the four borders.</p>
+		<p>
+			The color can be set by:</p>
+		<ul>
+			<li>
+				name - specify a color name, like &quot;red&quot;</li>
+			<li>
+				Hex - specify a hex value, like &quot;#ff0000&quot;</li>
+			<li>
+				RGB - specify a RGB value, like &quot;rgb(255,0,0)&quot;</li>
+			<li>
+				transparent</li>
+		</ul>
+		<p>
+			The <code>border-color</code> property can have from one to four values (for the top border, right border, bottom border, and the left border).&nbsp;</p>
+		<p>
+			If <code>border-color</code> is not set, it inherits the color of the element.</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p.one </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-style:</span><span class="highVAL"> solid;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-color:</span><span class="highVAL"> red;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.two </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-style:</span><span class="highVAL"> solid;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-color:</span><span class="highVAL"> green;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.three </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-style:</span><span class="highVAL"> solid;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-color:</span><span class="highVAL"> red green blue yellow;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Border - Individual Sides</h2>
+		<p>
+			From the examples above you have seen that it is possible to specify a different border for each side.</p>
+		<p>
+			In CSS, there is also properties for specifying each of the borders (top, right, bottom, and left):</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-top-style:</span><span class="highVAL"> dotted;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-right-style:</span><span class="highVAL"> solid;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-bottom-style:</span><span class="highVAL"> dotted;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-left-style:</span><span class="highVAL"> solid;</span><br />
+				}</div>
+		</div>
+		<p>
+			The example above gives the same result as this:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border-style:</span><span class="highVAL"> dotted solid;</span><br />
+				}</div>
+		</div>
+		<p>
+			So, here is how it works:</p>
+		<p>
+			If the <code>border-style</code> property has four values:</p>
+		<ul>
+			<li>
+				<b>border-style: dotted solid double dashed; </b>
+				<ul>
+					<li>
+						top border is dotted</li>
+					<li>
+						right border is solid</li>
+					<li>
+						bottom border is double</li>
+					<li>
+						left border is dashed</li>
+				</ul>
+			</li>
+		</ul>
+		<p>
+			If the <code>border-style</code> property has three values:</p>
+		<ul>
+			<li>
+				<b>border-style: dotted solid double;</b>
+				<ul>
+					<li>
+						top border is dotted</li>
+					<li>
+						right and left borders are solid</li>
+					<li>
+						bottom border is double</li>
+				</ul>
+			</li>
+		</ul>
+		<p>
+			If the <code>border-style</code> property has two values:</p>
+		<ul>
+			<li>
+				<b>border-style: dotted solid;</b>
+				<ul>
+					<li>
+						top and bottom borders are dotted</li>
+					<li>
+						right and left borders are solid</li>
+				</ul>
+			</li>
+		</ul>
+		<p>
+			If the <code>border-style</code> property has one value:</p>
+		<ul>
+			<li>
+				<b>border-style: dotted;</b>
+				<ul>
+					<li>
+						all four borders are dotted</li>
+				</ul>
+			</li>
+		</ul>
+		<p>
+			The <code>border-style</code> property is used in the example above. However, it also works with <code>border-width</code> and <code>border-color</code>.</p>
+		<hr />
+		<h2>
+			Border - Shorthand Property</h2>
+		<p>
+			As you can see from the examples above, there are many properties to consider when dealing with borders.</p>
+		<p>
+			To shorten the code, it is also possible to specify all the individual border properties in one property.</p>
+		<p>
+			The <code>border</code> property is a shorthand property for the following individual border properties:</p>
+		<ul>
+			<li>
+				<code>border-width</code></li>
+			<li>
+				<code>border-style</code> (required)</li>
+			<li>
+				<code>border-color</code></li>
+		</ul>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 5px solid red;</span><br />
+				}</div>
+		</div>
+	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>

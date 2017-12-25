@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+#overflow1 {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: clip;
+    border: 1px solid #000000;
+}
+#overflow2 {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #000000;
+}
+
+#wordwrap {
+    width: 11em;
+    border: 1px solid #000000;
+    word-wrap: break-word;
+}
+#normal {
+    width: 11em;
+    border: 1px solid #000000;
+    word-wrap: normal;
+}
+
+p.test1 {
+    width: 140px;
+    border: 1px solid #000000;
+    word-break: keep-all;
+}
+
+p.test2 {
+    width: 140px;
+    border: 1px solid #000000;
+    word-break: break-all;
+}		</style>
+	</head>
+	<body>
+		<h1>
+			CSS3 <span class="color_h1">Text</span></h1>
+		<hr />
+		<h2>
+			CSS3 Text</h2>
+		<p>
+			CSS3 contains several new text features.</p>
+		<p>
+			In this chapter you will learn about the following text properties:</p>
+		<ul>
+			<li>
+				<code>text-overflow</code></li>
+			<li>
+				<code>word-wrap</code></li>
+			<li>
+				<code>word-break</code></li>
+		</ul>
+		<hr />
+		<h2>
+			Browser Support</h2>
+		<p>
+			The numbers in the table specify the first browser version that fully supports the property.</p>
+		<p>
+			Numbers followed by -o- specify the first version that worked with a prefix.&nbsp;</p>
+		<div class="w3-responsive">
+			<table class="browserref notranslate">
+				<tbody>
+					<tr>
+						<th style="width:22%;font-size:16px;text-align:left;">
+							Property</th>
+						<th class="bsChrome" style="width:13%;" title="Chrome">
+							&nbsp;</th>
+						<th class="bsIE" style="width:13%;" title="Internet Explorer">
+							&nbsp;</th>
+						<th class="bsFirefox" style="width:13%;" title="Firefox">
+							&nbsp;</th>
+						<th class="bsSafari" style="width:13%;" title="Safari">
+							&nbsp;</th>
+						<th class="bsOpera" style="width:13%;" title="Opera">
+							&nbsp;</th>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							text-overflow</td>
+						<td>
+							4.0</td>
+						<td>
+							6.0</td>
+						<td>
+							7.0</td>
+						<td>
+							3.1</td>
+						<td>
+							11.0<br />
+							9.0&nbsp;-o-</td>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							word-wrap</td>
+						<td>
+							23.0</td>
+						<td>
+							5.5</td>
+						<td>
+							3.5</td>
+						<td>
+							6.1</td>
+						<td>
+							12.1</td>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							word-break</td>
+						<td>
+							4.0</td>
+						<td>
+							5.5</td>
+						<td>
+							15.0</td>
+						<td>
+							3.1</td>
+						<td>
+							15.0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr />
+		<h2>
+			CSS3 Text Overflow</h2>
+		<p>
+			The CSS3 <code>text-overflow</code> property specifies how overflowed content that is not displayed should be signaled to the user.</p>
+		<p>
+			It can be clipped:</p>
+		<p id="overflow1">
+			This is some long text that will not fit in the box</p>
+		<p>
+			or it can be rendered as an ellipsis (...):</p>
+		<p id="overflow2">
+			This is some long text that will not fit in the box</p>
+		<p>
+			The CSS code is as follows:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p.test1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">white-space:</span><span class="highVAL"> nowrap;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 200px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid #000000;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">overflow:</span><span class="highVAL"> hidden;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-overflow:</span><span class="highVAL"> clip;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.test2 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">white-space:</span><span class="highVAL"> nowrap;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 200px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid #000000;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">overflow:</span><span class="highVAL"> hidden;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-overflow:</span><span class="highVAL"> ellipsis;</span><br />
+				}</div>
+		</div>
+		<p>
+			The following example shows how you can display the overflowed content when hovering over the element:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div.test:hover </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">text-overflow:</span><span class="highVAL"> inherit;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">overflow:</span><span class="highVAL"> visible;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			CSS3 Word Wrapping</h2>
+		<p>
+			The CSS3 <code>word-wrap</code> property allows long words to be able to be broken and wrap onto the next line.&nbsp;</p>
+		<p>
+			If a word is too long to fit within an area, it expands outside:</p>
+		<p id="normal">
+			This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+		<p>
+			The word-wrap property allows you to force the text to wrap - even if it means splitting it in the middle of a word:</p>
+		<p id="wordwrap">
+			This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+		<p>
+			The CSS code is as follows:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<p>
+				Allow long words to be able to be broken and wrap onto the next line:</p>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">word-wrap:</span><span class="highVAL"> break-word;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			CSS3 Word Breaking</h2>
+		<p>
+			The CSS3 <code>word-break</code> property specifies line breaking rules.</p>
+		<p class="test1">
+			This paragraph contains some text. This line will-break-at-hyphens.</p>
+		<p class="test2">
+			This paragraph contains some text. The lines will break at any character.</p>
+		<p>
+			The CSS code is as follows:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">p.test1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">word-break:</span><span class="highVAL"> keep-all;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">p.test2 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">word-break:</span><span class="highVAL"> break-all;</span><br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

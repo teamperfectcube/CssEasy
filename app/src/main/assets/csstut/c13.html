@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+ol#ex1,ol#ex4 {
+    background: #ff9999;
+    padding: 20px;
+}
+
+ul#ex2,ul#ex5 {
+    background: #3399ff;
+    padding: 20px;
+}
+
+ol#ex1 li,ol#ex4 li {
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+}
+
+ul#ex2 li,ul#ex5 li {
+    background: #cce5ff;
+    margin: 5px;
+}		</style>
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Lists</span></h1>
+		<hr />
+		<ol id="ex1">
+			<li>
+				Coffee</li>
+			<li>
+				Tea</li>
+			<li>
+				Coca Cola</li>
+		</ol>
+		<ul id="ex2">
+			<li>
+				Coffee</li>
+			<li>
+				Tea</li>
+			<li>
+				Coca Cola</li>
+		</ul>
+		<hr />
+		<h2>
+			HTML Lists and CSS List Properties</h2>
+		<p>
+			In HTML, there are two main types of lists:</p>
+		<ul>
+			<li>
+				unordered lists (&lt;ul&gt;) - the list items are marked with bullets</li>
+			<li>
+				ordered lists (&lt;ol&gt;) - the list items are marked with numbers or letters</li>
+		</ul>
+		<p>
+			The CSS list properties allow you to:</p>
+		<ul>
+			<li>
+				Set different list item markers for ordered lists</li>
+			<li>
+				Set different list item markers for unordered lists</li>
+			<li>
+				Set an image as the list item marker</li>
+			<li>
+				Add background colors to lists and list items</li>
+		</ul>
+		<hr />
+		<h2>
+			Different List Item Markers</h2>
+		<p>
+			The <code>list-style-type</code> property specifies the type of list item marker.</p>
+		<p>
+			The following example shows some of the available list item markers:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul.a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-type:</span><span class="highVAL"> circle;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">ul.b </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-type:</span><span class="highVAL"> square;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">ol.c </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-type:</span><span class="highVAL"> upper-roman;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">ol.d </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-type:</span><span class="highVAL"> lower-alpha;</span><br />
+				}</div>
+		</div>
+		<p>
+			Note: Some of the values are for unordered lists, and some for ordered lists.</p>
+		<hr />
+		<h2>
+			An Image as The List Item Marker</h2>
+		<p>
+			The <code>list-style-image</code> property specifies an image as the list item marker:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-image:</span><span class="highVAL"> url(&#39;sqpurple.gif&#39;);</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Position The List Item Markers</h2>
+		<p>
+			The <code>list-style-position</code> property specifies whether the list-item markers should appear inside or outside the content flow:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-position:</span><span class="highVAL"> inside;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			List - Shorthand property</h2>
+		<p>
+			The <code>list-style</code> property is a shorthand property. It is used to set all the list properties in one declaration:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style:</span><span class="highVAL"> square inside url(&quot;sqpurple.gif&quot;);</span><br />
+				}</div>
+		</div>
+		<p>
+			When using the shorthand property, the order of the property values are:</p>
+		<ul>
+			<li>
+				<code>list-style-type</code> (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)</li>
+			<li>
+				<code>list-style-position</code> (specifies whether the list-item markers should appear inside or outside the content flow)</li>
+			<li>
+				<code>list-style-image</code> (specifies an image as the list item marker)</li>
+		</ul>
+		<p>
+			If one of the property values above are missing, the default value for the missing property will be inserted, if any.</p>
+		<hr />
+		<h2>
+			Styling List With Colors</h2>
+		<p>
+			We can also style lists with colors, to make them look a little more interesting.</p>
+		<p>
+			Anything added to the &lt;ol&gt; or &lt;ul&gt; tag, affects the entire list, while properties added to the &lt;li&gt; tag will affect the individual list items:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">ol </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> #ff9999;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 20px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> #3399ff;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 20px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">ol li </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> #ffe5e5;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 5px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin-left:</span><span class="highVAL"> 35px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">ul li </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> #cce5ff;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 5px;</span><br />
+				}</div>
+			<p>
+				Result:</p>
+			<div class="w3-padding w3-white notranslate">
+				<ol id="ex4">
+					<li>
+						Coffee</li>
+					<li>
+						Tea</li>
+					<li>
+						Coca Cola</li>
+				</ol>
+				<ul id="ex5">
+					<li>
+						Coffee</li>
+					<li>
+						Tea</li>
+					<li>
+						Coca Cola</li>
+				</ul>
+			</div>
+		</div>
+	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>

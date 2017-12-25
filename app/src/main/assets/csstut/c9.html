@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Height and Width Dimensions</span></h1>
+		<hr />
+		<div style="width:100%;border:1px solid #73AD21;padding:10px;">
+			<h2>
+				CSS Dimension Properties</h2>
+			<p>
+				The CSS dimension properties allow you to control the height and width of an element.</p>
+			<p>
+				This element has a width of 100%.</p>
+		</div>
+		<hr />
+		<h2>
+			Setting height and width</h2>
+		<p>
+			The <code>height</code> and <code>width</code> properties are used to set the height and width of an element.</p>
+		<p>
+			The <code>height</code> and <code>width</code> can be set to auto (this is default. Means that the browser calculates the height and width), or be specified in <em>length values</em>, like px, cm, etc., or in percent (%) of the containing block.</p>
+		<div style="border:3px solid #73AD21; height:100px; width:500px;">
+			This &lt;div&gt; element has a height of 100 pixels and a width of 500 pixels.</div>
+		<p>
+			<strong>Note:</strong> The <code>height</code> and <code>width</code> properties do not include padding, borders, or margins; they set the height/width of the area inside the padding, border, and margin of the element!</p>
+		<p>
+			The following example shows a <code>&lt;div&gt;</code> element with a height of 100 pixels and a width of 500 pixels:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 500px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 3px solid #73AD21;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Setting max-width</h2>
+		<p>
+			The <code>max-width</code> property is used to set the maximum width of an element.</p>
+		<p>
+			The <code>max-width</code> can be specified in <em>length values</em>, like px, cm, etc., or in percent (%) of the containing block, or set to none (this is default. Means that there is no maximum width).</p>
+		<p>
+			The problem with the <code>&lt;div&gt;</code> above occurs when the browser window is smaller than the width of the element (500px). The browser then adds a horizontal scrollbar to the page.</p>
+		<p>
+			Using <code>max-width</code> instead, in this situation, will improve the browser&#39;s handling of small windows.</p>
+		<p>
+			<strong>Tip:</strong> Drag the browser window to smaller than 500px wide, to see the difference between the two divs!</p>
+		<div style="border:3px solid #73AD21; height:100px; max-width:500px;">
+			This &lt;div&gt; element has a height of 100 pixels and a max-width of 500 pixels.</div>
+		<p>
+			<strong>Note:</strong> The value of the <code>max-width</code> property overrides <code>width</code>.</p>
+		<p>
+			The following example shows a <code>&lt;div&gt;</code> element with a height of 100 pixels and a max-width of 500 pixels:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">max-width:</span><span class="highVAL"> 500px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 3px solid #73AD21;</span><br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

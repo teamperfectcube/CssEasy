@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+.bg1 {
+    width: 100%;
+    height:400px;
+    background-image:url('img_flowers.jpg');
+    background-repeat:no-repeat;
+    background-size:contain;
+    border: 1px solid red;
+}
+.bg2 {
+    width: 100%;
+    height:400px;
+    background-image:url('img_flowers.jpg');
+    background-size:100% 100%;
+    border:1px solid red;
+}
+.bg3 {
+    width: 100%;
+    height:400px;
+    background-image:url('img_flowers.jpg');
+    background-size:cover;
+    border:1px solid red;
+}		</style>
+	</head>
+	<body>
+		<h1>
+			Responsive Web Design - <span class="color_h1">Images</span></h1>
+		<hr />
+		<h2>
+			Using The width Property</h2>
+		<p>
+			If the <code>width</code> property is set to 100%, the image will be responsive and scale up and down:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				img {<br />
+				&nbsp;&nbsp;&nbsp; width: 100%;<br />
+				&nbsp;&nbsp;&nbsp; height: auto;<br />
+				}</div>
+		</div>
+		<p>
+			Notice that in the example above, the image can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the <code>max-width</code> property instead.</p>
+		<hr />
+		<h2>
+			Using The max-width Property</h2>
+		<p>
+			If the <code>max-width</code> property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				img {<br />
+				&nbsp;&nbsp;&nbsp; max-width: 100%;<br />
+				&nbsp;&nbsp;&nbsp; height: auto;<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Add an Image to The Example Web Page</h2>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				img {<br />
+				&nbsp;&nbsp;&nbsp; width: 100%;<br />
+				&nbsp;&nbsp;&nbsp; height: auto;<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Background Images</h2>
+		<p>
+			Background images can also respond to resizing and scaling.</p>
+		<p>
+			Here we will show three different methods:</p>
+		<p>
+			1. If the <code>background-size</code> property is set to &quot;contain&quot;, the background image will scale, and try to fit the content area. However, the image will keep its aspect ratio (the proportional relationship between the image&#39;s width and height):</p>
+		<div class="bg1">
+			&nbsp;</div>
+		<br />
+		<p>
+			Here is the CSS code:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				div {<br />
+				&nbsp;&nbsp;&nbsp; width: 100%;<br />
+				&nbsp;&nbsp;&nbsp; height: 400px;<br />
+				&nbsp;&nbsp;&nbsp; background-image: url(&#39;img_flowers.jpg&#39;);<br />
+				&nbsp;&nbsp;&nbsp; background-repeat: no-repeat;<br />
+				&nbsp;&nbsp;&nbsp; background-size: contain;<br />
+				&nbsp;&nbsp;&nbsp; border: 1px solid red;<br />
+				}</div>
+		</div>
+		<hr />
+		<p>
+			2. If the <code>background-size</code> property is set to &quot;100% 100%&quot;, the background image will stretch to cover the entire content area:</p>
+		<div class="bg2">
+			&nbsp;</div>
+		<br />
+		<p>
+			Here is the CSS code:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				div {<br />
+				&nbsp;&nbsp;&nbsp; width: 100%;<br />
+				&nbsp;&nbsp;&nbsp; height: 400px;<br />
+				&nbsp;&nbsp;&nbsp; background-image: url(&#39;img_flowers.jpg&#39;);<br />
+				&nbsp;&nbsp;&nbsp; background-size: 100% 100%;<br />
+				&nbsp;&nbsp;&nbsp; border: 1px solid red;<br />
+				}</div>
+		</div>
+		<hr />
+		<p>
+			3. If the <code>background-size</code> property is set to &quot;cover&quot;, the background image will scale to cover the entire content area. Notice that the &quot;cover&quot; value keeps the aspect ratio, and some part of the background image may be clipped:</p>
+		<div class="bg3">
+			&nbsp;</div>
+		<br />
+		<p>
+			Here is the CSS code:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				div {<br />
+				&nbsp;&nbsp;&nbsp; width: 100%;<br />
+				&nbsp;&nbsp;&nbsp; height: 400px;<br />
+				&nbsp;&nbsp;&nbsp; background-image: url(&#39;img_flowers.jpg&#39;);<br />
+				&nbsp;&nbsp;&nbsp; background-size: cover;<br />
+				&nbsp;&nbsp;&nbsp; border: 1px solid red;<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Different Images for Different Devices</h2>
+		<p>
+			A large image can be perfect on a big computer screen, but useless on a small device. Why load a large image when you have to scale it down anyway? To reduce the load, or for any other reasons, you can use media queries to display different images on different devices.</p>
+		<p>
+			Here is one large image and one smaller image that will be displayed on different devices:</p>
+		<div class="row">
+			<div class="col-lg-6" style="padding:15px;">
+				<img class="img-responsive" src="file:///android_asset/csstut/img_flowers.jpg" /></div>
+			<div class="col-lg-6" style="padding:15px;text-align:center;">
+				<img class="img-responsive" src="file:///android_asset/csstut/img_smallflower.jpg" /></div>
+		</div>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				/* For width smaller than 400px: */<br />
+				body {<br />
+				&nbsp;&nbsp;&nbsp; background-image: url(&#39;img_smallflower.jpg&#39;);<br />
+				}<br />
+				<br />
+				/* For width 400px and larger: */<br />
+				@media only screen and (min-width: 400px) {<br />
+				&nbsp;&nbsp;&nbsp; body {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-image: url(&#39;img_flowers.jpg&#39;);<br />
+				&nbsp;&nbsp;&nbsp; }<br />
+				}</div>
+		</div>
+		<p>
+			You can use the media query <code>min-device-width</code>, instead of <code>min-width</code>, which checks the device width, instead of the browser width. Then the image will not change when you resize the browser window:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				/* For devices smaller than 400px: */<br />
+				body {<br />
+				&nbsp;&nbsp;&nbsp; background-image: url(&#39;img_smallflower.jpg&#39;);<br />
+				}<br />
+				<br />
+				/* For devices 400px and larger: */<br />
+				@media only screen and (min-device-width: 400px) {<br />
+				&nbsp;&nbsp;&nbsp; body {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-image: url(&#39;img_flowers.jpg&#39;);<br />
+				&nbsp;&nbsp;&nbsp; }<br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			HTML5 &lt;picture&gt; Element</h2>
+		<p>
+			HTML5 introduced the <code>&lt;picture&gt;</code> element, which lets you define more than one image.</p>
+		<h3>
+			Browser Support</h3>
+		<table class="browserref notranslate">
+			<tbody>
+				<tr>
+					<th style="width:15%;font-size:16px;text-align:left;">
+						Element</th>
+					<th class="bsIE" style="width:15%;" title="Internet Explorer">
+						&nbsp;</th>
+					<th class="bsChrome" style="width:17%;" title="Chrome">
+						&nbsp;</th>
+					<th class="bsFirefox" style="width:18%;" title="Firefox">
+						&nbsp;</th>
+					<th class="bsSafari" style="width:18%;" title="Safari">
+						&nbsp;</th>
+					<th class="bsOpera" style="width:17%;" title="Opera">
+						&nbsp;</th>
+				</tr>
+				<tr>
+					<td style="text-align:left;">
+						&lt;picture&gt;</td>
+					<td>
+						<span class="deprecated">Not supported</span></td>
+					<td>
+						38.0</td>
+					<td>
+						38.0</td>
+					<td>
+						<span class="deprecated">Not supported</span></td>
+					<td>
+						25.0</td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<p>
+			The <code>&lt;picture&gt;</code> element works similar to the <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> elements. You set up different sources, and the first source that fits the preferences is the one being used:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+				&lt;picture&gt;<br />
+				&nbsp; &lt;source srcset=&quot;img_smallflower.jpg&quot; media=&quot;(max-width: 400px)&quot;&gt;<br />
+				&nbsp; &lt;source srcset=&quot;img_flowers.jpg&quot;&gt;<br />
+				&nbsp; &lt;img src=&quot;img_flowers.jpg&quot; alt=&quot;Flowers&quot;&gt;<br />
+				&lt;/picture&gt;</div>
+		</div>
+		<p>
+			The <code>srcset</code> attribute is required, and defines the source of the image.</p>
+		<p>
+			The <code>media</code> attribute is optional, and accepts the media queries.</p>
+		<p>
+			You should also define an <code>&lt;img&gt;</code> element for browsers that do not support the <code>&lt;picture&gt;</code> element.</p>
+	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>

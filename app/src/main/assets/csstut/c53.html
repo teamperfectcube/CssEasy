@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+#div1 {
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;
+    box-sizing: content-box;
+}
+
+#div2 {
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    border: 1px solid red;
+    box-sizing: content-box;
+}
+
+#div3 {
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+#div4 {
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    border: 1px solid red;
+    box-sizing: border-box;
+}		</style>
+	</head>
+	<body>
+		<h1>
+			CSS3 <span class="color_h1">Box Sizing</span></h1>
+		<hr />
+		<h2>
+			CSS3 Box Sizing</h2>
+		<p>
+			The CSS3 <code>box-sizing</code> property allows us to include the padding and border in an element&#39;s total width and height.</p>
+		<hr />
+		<h2>
+			Browser Support</h2>
+		<p>
+			The numbers in the table specify the first browser version that fully supports the property.</p>
+		<p>
+			Numbers followed by -webkit- or -moz- specify the first version that worked with a prefix.</p>
+		<div class="w3-responsive">
+			<table class="browserref notranslate">
+				<tbody>
+					<tr>
+						<th style="width:22%;font-size:16px;text-align:left;">
+							Property</th>
+						<th class="bsChrome" style="width:13%;" title="Chrome">
+							&nbsp;</th>
+						<th class="bsIE" style="width:13%;" title="Internet Explorer">
+							&nbsp;</th>
+						<th class="bsFirefox" style="width:13%;" title="Firefox">
+							&nbsp;</th>
+						<th class="bsSafari" style="width:13%;" title="Safari">
+							&nbsp;</th>
+						<th class="bsOpera" style="width:13%;" title="Opera">
+							&nbsp;</th>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							box-sizing</td>
+						<td>
+							10.0<br />
+							4.0&nbsp;-webkit-</td>
+						<td>
+							8.0</td>
+						<td>
+							29.0<br />
+							2.0&nbsp;-moz-</td>
+						<td>
+							5.1<br />
+							3.1&nbsp;-webkit-</td>
+						<td>
+							9.5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr />
+		<h2>
+			Without the CSS3 box-sizing Property</h2>
+		<p>
+			By default, the width and height of an element is calculated like this:</p>
+		<p>
+			width + padding + border = actual width of an element<br />
+			height + padding + border = actual height of an element</p>
+		<p>
+			This means: When you set the width/height of an element, the element often appear bigger than you have set (because the element&#39;s border and padding are added to the element&#39;s specified width/height).</p>
+		<p>
+			The following illustration shows two &lt;div&gt; elements with the same specified width and height:</p>
+		<div id="div1">
+			This div is smaller (width is 300px and height is 100px).</div>
+		<br />
+		<div id="div2">
+			This div is bigger (width is also 300px and height is 100px).</div>
+		<br />
+		<p>
+			The two &lt;div&gt; elements above end up with different sizes in the result (because div2 has a padding specified):</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.div1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 300px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid blue;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">.div2 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 300px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 50px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid red;</span><br />
+				}</div>
+		</div>
+		<p>
+			So, for a long time web developers have specified a smaller width value than they wanted, because they had to subtract out the padding and borders.</p>
+		<p>
+			With CSS3, the <code>box-sizing</code> property solves this problem.</p>
+		<hr />
+		<h2>
+			With the CSS3 box-sizing Property</h2>
+		<p>
+			The CSS3 <code>box-sizing</code> property allows us to include the padding and border in an element&#39;s total width and height.</p>
+		<p>
+			If you set <code>box-sizing: border-box;</code> on an element padding and border are included in the width and height:</p>
+		<div id="div3">
+			Both divs are the same size now!</div>
+		<br />
+		<div id="div4">
+			Hooray!</div>
+		<br />
+		<p>
+			Here is the same example as above, with <code>box-sizing: border-box;</code> added to both &lt;div&gt; elements:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.div1 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 300px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid blue;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">box-sizing:</span><span class="highVAL"> border-box;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">.div2 </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 300px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 50px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">box-sizing:</span><span class="highVAL"> border-box;</span><br />
+				}</div>
+		</div>
+		<p>
+			Since the result of using the <code>box-sizing: border-box;</code> is so much better, many developers want all elements on their pages to work this way.</p>
+		<p>
+			The code below ensures that all elements are sized in this more intuitive way. Many browsers already use <code>box-sizing: border-box;</code> for many form elements (but not all - which is why inputs and textareas look different at width: 100%;).</p>
+		<p>
+			Applying this to all elements is safe and wise:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">* </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">box-sizing:</span><span class="highVAL"> border-box;</span><br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

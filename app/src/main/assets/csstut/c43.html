@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS3 <span class="color_h1">Web Fonts</span></h1>
+		<hr />
+		<p>
+			<img alt="With CSS3, web designers are no longer forced to use only web-safe fonts" src="file:///android_asset/csstut/font.gif" /></p>
+		<hr />
+		<h2>
+			CSS3 Web Fonts - The @font-face Rule</h2>
+		<p>
+			Web fonts allow Web designers to use fonts that are not installed on the user&#39;s computer.</p>
+		<p>
+			When you have found/bought the font you wish to use, just include the font file on your web server, and it will be automatically downloaded to the user when needed.</p>
+		<p>
+			Your &quot;own&quot; fonts are defined within the CSS3 <code>@font-face</code> rule.</p>
+		<hr />
+		<h2>
+			Browser Support</h2>
+		<p>
+			The numbers in the table specify the first browser version that fully supports the property.</p>
+		<div class="w3-responsive">
+			<table class="browserref notranslate">
+				<tbody>
+					<tr>
+						<th style="width:22%;font-size:16px;text-align:left;">
+							Property</th>
+						<th class="bsChrome" style="width:13%;" title="Chrome">
+							&nbsp;</th>
+						<th class="bsIE" style="width:13%;" title="Internet Explorer">
+							&nbsp;</th>
+						<th class="bsFirefox" style="width:13%;" title="Firefox">
+							&nbsp;</th>
+						<th class="bsSafari" style="width:13%;" title="Safari">
+							&nbsp;</th>
+						<th class="bsOpera" style="width:13%;" title="Opera">
+							&nbsp;</th>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							@font-face</td>
+						<td>
+							4.0</td>
+						<td>
+							9.0</td>
+						<td>
+							3.5</td>
+						<td>
+							3.2</td>
+						<td>
+							10.0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr />
+		<h2>
+			Different Font Formats</h2>
+		<p>
+			<strong>TrueType Fonts (TTF)</strong></p>
+		<p>
+			TrueType is a font standard developed in the late 1980s, by Apple and Microsoft. TrueType is the most common font format for both the Mac OS and Microsoft Windows operating systems.</p>
+		<p>
+			<strong>OpenType Fonts (OTF)</strong></p>
+		<p>
+			OpenType is a format for scalable computer fonts. It was built on TrueType, and is a registered trademark of Microsoft. OpenType fonts are used commonly today on the major computer platforms.</p>
+		<p>
+			<strong>The Web Open Font Format (WOFF)</strong></p>
+		<p>
+			WOFF is a font format for use in web pages. It was developed in 2009, and is now a W3C Recommendation. WOFF is essentially OpenType or TrueType with compression and additional metadata. The goal is to support font distribution from a server to a client over a network with bandwidth constraints.</p>
+		<p>
+			<strong>The Web Open Font Format (WOFF 2.0)</strong></p>
+		<p>
+			TrueType/OpenType font that provides better compression than WOFF 1.0.</p>
+		<p>
+			<strong>SVG Fonts/Shapes</strong></p>
+		<p>
+			SVG fonts allow SVG to be used as glyphs when displaying text. The SVG 1.1 specification define a font module that allows the creation of fonts within an SVG document. You can also apply CSS to SVG documents, and the @font-face rule can be applied to text in SVG documents.</p>
+		<p>
+			<strong>Embedded OpenType Fonts (EOT)</strong></p>
+		<p>
+			EOT fonts are a compact form of OpenType fonts designed by Microsoft for use as embedded fonts on web pages.</p>
+		<hr />
+		<h2>
+			Browser Support for Font Formats</h2>
+		<p>
+			The numbers in the table specifies the first browser version that fully supports the font format.</p>
+		<table class="browserref notranslate">
+			<tbody>
+				<tr>
+					<th style="width:15%;font-size:16px;text-align:left;">
+						Font format</th>
+					<th class="bsIE" style="width:15%;" title="Internet Explorer">
+						&nbsp;</th>
+					<th class="bsChrome" style="width:17%;" title="Chrome">
+						&nbsp;</th>
+					<th class="bsFirefox" style="width:18%;" title="Firefox">
+						&nbsp;</th>
+					<th class="bsSafari" style="width:18%;" title="Safari">
+						&nbsp;</th>
+					<th class="bsOpera" style="width:17%;" title="Opera">
+						&nbsp;</th>
+				</tr>
+				<tr>
+					<td>
+						TTF/OTF</td>
+					<td>
+						9.0*</td>
+					<td>
+						4.0</td>
+					<td>
+						3.5</td>
+					<td>
+						3.1</td>
+					<td>
+						10.0</td>
+				</tr>
+				<tr>
+					<td>
+						WOFF</td>
+					<td>
+						9.0</td>
+					<td>
+						5.0</td>
+					<td>
+						3.6</td>
+					<td>
+						5.1</td>
+					<td>
+						11.1</td>
+				</tr>
+				<tr>
+					<td>
+						WOFF2</td>
+					<td>
+						<span class="deprecated">Not supported</span></td>
+					<td>
+						36.0</td>
+					<td>
+						35.0*</td>
+					<td>
+						<span class="deprecated">Not supported</span></td>
+					<td>
+						26.0</td>
+				</tr>
+				<tr>
+					<td>
+						SVG</td>
+					<td>
+						<span class="deprecated">Not supported</span></td>
+					<td>
+						4.0</td>
+					<td>
+						<span class="deprecated">Not supported</span></td>
+					<td>
+						3.2</td>
+					<td>
+						9.0</td>
+				</tr>
+				<tr>
+					<td>
+						EOT</td>
+					<td>
+						6.0</td>
+					<td>
+						<span class="deprecated">Not supported</span></td>
+					<td>
+						<span class="deprecated">Not supported</span></td>
+					<td>
+						<span class="deprecated">Not supported</span></td>
+					<td>
+						<span class="deprecated">Not supported</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			*IE: The font format only works when set to be &quot;installable&quot;.</p>
+		<p>
+			*Firefox: Not supported by default, but can be enabled (need to set a flag to &quot;true&quot; to use WOFF2).</p>
+		<hr />
+		<h2>
+			Using The Font You Want</h2>
+		<p>
+			In the CSS3 <code>@font-face</code> rule you must first define a name for the font (e.g. myFirstFont), and then point to the font file.</p>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="width:32px;height:32px" /></th>
+					<td>
+						<strong>Tip:</strong> Always use lowercase letters for the font URL. Uppercase letters can give unexpected results in IE.</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			To use the font for an HTML element, refer to the name of the font (myFirstFont) through the <code>font-family</code> property:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">@font-face </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">font-family:</span><span class="highVAL"> myFirstFont;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">src:</span><span class="highVAL"> url(sansation_light.woff);</span><br />
+				}<br />
+				<br />
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">font-family:</span><span class="highVAL"> myFirstFont;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Using Bold Text</h2>
+		<p>
+			You must add another <code>@font-face</code> rule containing descriptors for bold text:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">@font-face </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">font-family:</span><span class="highVAL"> myFirstFont;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">src:</span><span class="highVAL"> url(sansation_bold.woff);</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">font-weight:</span><span class="highVAL"> bold;</span><br />
+				}</div>
+		</div>
+		<p>
+			The file &quot;sansation_bold.woff&quot; is another font file, that contains the bold characters for the Sansation font.</p>
+		<p>
+			Browsers will use this whenever a piece of text with the font-family &quot;myFirstFont&quot; should render as bold.</p>
+		<p>
+			This way you can have many <code>@font-face</code> rules for the same font.</p>
+		<hr />
+		<h2>
+			CSS3 Font Descriptors</h2>
+		<p>
+			The following table lists all the font descriptors that can be defined inside the <code>@font-face</code> rule:</p>
+		<table class="w3-table-all notranslate">
+			<tbody>
+				<tr>
+					<th style="width:17%">
+						Descriptor</th>
+					<th style="width:20%">
+						Values</th>
+					<th>
+						Description</th>
+				</tr>
+				<tr>
+					<td>
+						font-family</td>
+					<td>
+						<i>name</i></td>
+					<td>
+						Required. Defines a name for the font</td>
+				</tr>
+				<tr>
+					<td>
+						src</td>
+					<td>
+						<i>URL</i></td>
+					<td>
+						Required. Defines the URL of the font file</td>
+				</tr>
+				<tr>
+					<td>
+						font-stretch</td>
+					<td>
+						normal<br />
+						condensed<br />
+						ultra-condensed<br />
+						extra-condensed<br />
+						semi-condensed<br />
+						expanded<br />
+						semi-expanded<br />
+						extra-expanded<br />
+						ultra-expanded</td>
+					<td>
+						Optional. Defines how the font should be stretched. Default is &quot;normal&quot;</td>
+				</tr>
+				<tr>
+					<td>
+						font-style</td>
+					<td>
+						normal<br />
+						italic<br />
+						oblique</td>
+					<td>
+						Optional. Defines how the font should be styled. Default is &quot;normal&quot;</td>
+				</tr>
+				<tr>
+					<td>
+						font-weight</td>
+					<td>
+						normal<br />
+						bold<br />
+						100<br />
+						200<br />
+						300<br />
+						400<br />
+						500<br />
+						600<br />
+						700<br />
+						800<br />
+						900</td>
+					<td>
+						Optional. Defines the boldness of the font. Default is &quot;normal&quot;</td>
+				</tr>
+				<tr>
+					<td>
+						unicode-range</td>
+					<td>
+						<i>unicode-range</i></td>
+					<td>
+						Optional. Defines the range of UNICODE characters the font supports. Default is &quot;U+0-10FFFF&quot;</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

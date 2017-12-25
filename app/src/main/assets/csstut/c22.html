@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Layout - Horizontal Align</span></h1>
+		<hr />
+		<div style="border:3px solid #73AD21; max-width:500px; margin: auto; padding: 15px">
+			<h2>
+				In CSS, several properties can be used to align elements horizontally.</h2>
+		</div>
+		<hr />
+		<h2>
+			Center Align - Using margin</h2>
+		<p>
+			Setting the width of a block-level element will prevent it from stretching out to the edges of its container. Use <code>margin: auto;</code>, to horizontally center an element within its container.</p>
+		<p>
+			The element will then take up the specified width, and the remaining space will be split equally between the two margins:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.center </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> auto;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 60%;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 3px solid #73AD21;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 10px;</span><br />
+				}</div>
+		</div>
+		<p>
+			<b>Tip:</b> Center aligning has no effect if the <code>width</code> property is not set (or set to 100%).</p>
+		<p>
+			<strong>Tip:</strong> For aligning text, see the <a href="file:///D:\Sivaram\Java\Text\css\c10.html">CSS Text</a> chapter.</p>
+		<hr />
+		<h2>
+			Left and Right Align - Using position</h2>
+		<p>
+			One method for aligning elements is to use <code>position: absolute;</code>:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.right </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> absolute;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">right:</span><span class="highVAL"> 0px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 300px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 3px solid #73AD21;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 10px;</span><br />
+				}</div>
+		</div>
+		<p>
+			<b>Note:</b> Absolute positioned elements are removed from the normal flow, and can overlap elements.</p>
+		<p>
+			<strong>Tip:</strong> When aligning elements with <code>position</code>, always define <code>margin</code> and <code>padding</code> for the <code>&lt;body&gt;</code> element. This is to avoid visual differences in different browsers.</p>
+		<p>
+			There is also a problem with IE8 and earlier, when using <code>position</code>. If a container element (in our case &lt;div class=&quot;container&quot;&gt;) has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using <code>position</code>:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 0;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">.container </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> relative;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100%;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">.right </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> absolute;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">right:</span><span class="highVAL"> 0px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 300px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #b0e0e6;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Left and Right Align - Using float</h2>
+		<p>
+			Another method for aligning elements is to use the <code>float</code> property:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.right </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">float:</span><span class="highVAL"> right;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 300px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 3px solid #73AD21;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 10px;</span><br />
+				}</div>
+		</div>
+		<p>
+			<strong>Tip:</strong> When aligning elements with <code>float</code>, always define <code>margin</code> and <code>padding</code> for the <code>&lt;body&gt;</code> element. This is to avoid visual differences in different browsers.</p>
+		<p>
+			There is also a problem with IE8 and earlier, when using <code>float</code>. If the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using <code>float</code>:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">body </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 0;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">.right </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">float:</span><span class="highVAL"> right;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 300px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #b0e0e6;</span><br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

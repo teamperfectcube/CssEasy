@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+.gridwrapper {
+	overflow: auto;
+	position: relative;
+	height: 250px;
+}
+.gridcontent {
+	width: 8.33%;
+	margin: 0;
+    border-right: 1px solid grey;
+	height: 100%;
+	float: left;
+	background-color: #f1f1f1;
+}		</style>
+	</head>
+	<body>
+		<h1>
+			Responsive Web Design - <span class="color_h1">Grid-View</span></h1>
+		<hr />
+		<h2>
+			What is a Grid-View?</h2>
+		<p>
+			Many web pages are based on a grid-view, which means that the page is divided into columns:</p>
+		<div class="gridcontainer">
+			<div class="gridwrapper">
+				<div class="gridcontent" style="border-left:1px solid grey;">
+					&nbsp;</div>
+				<div class="gridcontent">
+					&nbsp;</div>
+				<div class="gridcontent">
+					&nbsp;</div>
+				<div class="gridcontent">
+					&nbsp;</div>
+				<div class="gridcontent">
+					&nbsp;</div>
+				<div class="gridcontent">
+					&nbsp;</div>
+				<div class="gridcontent">
+					&nbsp;</div>
+				<div class="gridcontent">
+					&nbsp;</div>
+				<div class="gridcontent">
+					&nbsp;</div>
+				<div class="gridcontent">
+					&nbsp;</div>
+				<div class="gridcontent">
+					&nbsp;</div>
+				<div class="gridcontent">
+					&nbsp;</div>
+			</div>
+		</div>
+		<br />
+		<p>
+			Using a grid-view is very helpful when designing web pages. It makes it easier to place elements on the page.</p>
+		<div style="position:relative">
+			<div style="position:absolute;opacity:0.9;width:auto;left:0;right:0;">
+				<div class="gridcontainer">
+					<div class="gridwrapper" style="height:90px;">
+						<div class="gridcontent" style="width:100%;background:#9933cc;border-right-color:transparent;">
+							&nbsp;</div>
+					</div>
+					<div class="gridwrapper" style="height:230px;">
+						<div class="gridcontent" style="background-color:#ffffff;border:none;width:25%;padding-top:15px;">
+							<div style="background-color:#33b5e5;border:none;width:100%;height:15%;margin-bottom:10px;">
+								&nbsp;</div>
+							<div style="background-color:#33b5e5;border:none;width:100%;height:15%;margin-bottom:10px;">
+								&nbsp;</div>
+							<div style="background-color:#33b5e5;border:none;width:100%;height:15%;margin-bottom:10px;">
+								&nbsp;</div>
+							<div style="background-color:#33b5e5;border:none;width:100%;height:15%;">
+								&nbsp;</div>
+						</div>
+						<div class="gridcontent" style="background-color:#ffffff;border:none;">
+							&nbsp;</div>
+						<div class="gridcontent" style="background-color:#ffffff;border:none;">
+							&nbsp;</div>
+						<div class="gridcontent" style="background-color:#ffffff;border:none;">
+							&nbsp;</div>
+						<div class="gridcontent" style="background-color:#ffffff;border:none;">
+							&nbsp;</div>
+						<div class="gridcontent" style="background-color:#ffffff;border:none;">
+							&nbsp;</div>
+						<div class="gridcontent" style="background-color:#ffffff;border:none;">
+							&nbsp;</div>
+						<div class="gridcontent" style="background-color:#ffffff;border:none;width:25%;padding-top:15px;">
+							<div style="background-color:#33b5e5;border:none;width:100%;height:92%;">
+								&nbsp;</div>
+						</div>
+					</div>
+					<div class="gridwrapper" style="height:50px;">
+						<div class="gridcontent" style="width:100%;background:#0099cc;border-right-color:transparent;">
+							&nbsp;</div>
+					</div>
+				</div>
+			</div>
+			<div class="gridcontainer" style="opacity:0.1;">
+				<div class="gridwrapper" style="height:370px;">
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;border-left:1px solid #000000;">
+						&nbsp;</div>
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;">
+						&nbsp;</div>
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;">
+						&nbsp;</div>
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;">
+						&nbsp;</div>
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;">
+						&nbsp;</div>
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;">
+						&nbsp;</div>
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;">
+						&nbsp;</div>
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;">
+						&nbsp;</div>
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;">
+						&nbsp;</div>
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;">
+						&nbsp;</div>
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;">
+						&nbsp;</div>
+					<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;">
+						&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<p>
+			A responsive grid-view often has 12 columns, and has a total width of 100%, and will shrink and expand as you resize the browser window.</p>
+		<hr />
+		<h2>
+			Building a Responsive Grid-View</h2>
+		<p>
+			Lets start building a responsive grid-view.</p>
+		<p>
+			First ensure that all HTML elements have the <code>box-sizing</code> property set to <code>border-box</code>. This makes sure that the padding and border are included in the total width and height of the elements.</p>
+		<p>
+			Add the following code in your CSS:</p>
+		<div class="w3-code w3-border notranslate cssHigh">
+			<div>
+				<span class="highELE">* </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">box-sizing:</span><span class="highVAL"> border-box;</span><br />
+				}</div>
+		</div>
+		<p>
+			Read more about the <code>box-sizing</code> property in our <a href="file:///D:\Sivaram\Java\Text\css\c53.html">CSS3 Box Sizing</a> chapter.</p>
+		<p>
+			The following example shows a simple responsive web page, with two columns:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.menu </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 25%;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">float:</span><span class="highVAL"> left;</span><br />
+				}<br />
+				<span class="highELE">.main </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 75%;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">float:</span><span class="highVAL"> left;</span><br />
+				}</div>
+		</div>
+		<p>
+			The example above is fine if the web page only contains two columns.</p>
+		<p>
+			However, we want to use a responsive grid-view with 12 columns, to have more control over the web page.</p>
+		<p>
+			First we must calculate the percentage for one column: 100% / 12 columns = 8.33%.</p>
+		<p>
+			Then we make one class for each of the 12 columns, <code>class=&quot;col-&quot;</code> and a number defining how many columns the section should span:</p>
+		<div class="w3-example">
+			<h3>
+				CSS:</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.col-1 </span>{<span class="highATT">width:</span><span class="highVAL"> 8.33%;</span>}<br />
+				<span class="highELE">.col-2 </span>{<span class="highATT">width:</span><span class="highVAL"> 16.66%;</span>}<br />
+				<span class="highELE">.col-3 </span>{<span class="highATT">width:</span><span class="highVAL"> 25%;</span>}<br />
+				<span class="highELE">.col-4 </span>{<span class="highATT">width:</span><span class="highVAL"> 33.33%;</span>}<br />
+				<span class="highELE">.col-5 </span>{<span class="highATT">width:</span><span class="highVAL"> 41.66%;</span>}<br />
+				<span class="highELE">.col-6 </span>{<span class="highATT">width:</span><span class="highVAL"> 50%;</span>}<br />
+				<span class="highELE">.col-7 </span>{<span class="highATT">width:</span><span class="highVAL"> 58.33%;</span>}<br />
+				<span class="highELE">.col-8 </span>{<span class="highATT">width:</span><span class="highVAL"> 66.66%;</span>}<br />
+				<span class="highELE">.col-9 </span>{<span class="highATT">width:</span><span class="highVAL"> 75%;</span>}<br />
+				<span class="highELE">.col-10 </span>{<span class="highATT">width:</span><span class="highVAL"> 83.33%;</span>}<br />
+				<span class="highELE">.col-11 </span>{<span class="highATT">width:</span><span class="highVAL"> 91.66%;</span>}<br />
+				<span class="highELE">.col-12 </span>{<span class="highATT">width:</span><span class="highVAL"> 100%;</span>}</div>
+		</div>
+		<p>
+			&nbsp;All these columns should be floating to the left, and have a padding of 15px:</p>
+		<div class="w3-example">
+			<h3>
+				CSS:</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">[class*=&quot;col-&quot;] </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">float:</span><span class="highVAL"> left;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 15px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid red;</span><br />
+				}</div>
+		</div>
+		<p>
+			Each row should be wrapped in a <code>&lt;div&gt;</code>. The number of columns inside a row should allways add up to 12:</p>
+		<div class="w3-example">
+			<h3>
+				HTML:</h3>
+			<div class="w3-code notranslate htmlHigh">
+				<span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">class=</span><span class="highVAL">&quot;row&quot;</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">class=</span><span class="highVAL">&quot;col-3&quot;</span><span class="highGT">&gt;</span>...<span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
+				&nbsp; <span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">class=</span><span class="highVAL">&quot;col-9&quot;</span><span class="highGT">&gt;</span>...<span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
+				<span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span></div>
+		</div>
+		<p>
+			The columns inside a row are all floating to the left, and are therefore taken out of the flow of the page, and other elements will be placed as if the columns does not exist. To prevent this, we will add a style that clears the flow:</p>
+		<div class="w3-example">
+			<h3>
+				CSS:</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">.row:after </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">content:</span><span class="highVAL"> &quot;&quot;;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">clear:</span><span class="highVAL"> both;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> block;</span><br />
+				}</div>
+		</div>
+		<p>
+			We also want to add some styles and colors to make it look better:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">html </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">font-family:</span><span class="highVAL"> &quot;Lucida Sans&quot;, sans-serif;</span><br />
+				}<br />
+				<span class="highELE">.header </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #9933cc;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #ffffff;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 15px;</span><br />
+				}<br />
+				<span class="highELE">.menu ul </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style-type:</span><span class="highVAL"> none;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 0;</span><br />
+				}<br />
+				<span class="highELE">.menu li </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 8px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin-bottom:</span><span class="highVAL"> 7px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color :</span><span class="highVAL">#33b5e5;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">color:</span><span class="highVAL"> #ffffff;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">box-shadow:</span><span class="highVAL"> 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);</span><br />
+				}<br />
+				<span class="highELE">.menu li:hover </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> #0099cc;</span><br />
+				}</div>
+		</div>
+		<p>
+			Notice that the webpage in the example does not look good when you resize the browser window to a very small width. In the next chapter you will learn how to fix that.</p>	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>

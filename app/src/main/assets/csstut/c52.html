@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+#resize
+{
+border:2px solid;
+padding:20px;
+width:400px;
+resize:both;
+overflow:auto;
+margin-bottom:12px;
+}
+#outlineoffset
+{
+margin-left:20px;
+margin-bottom:30px;
+margin-top:30px;
+width:180px;
+padding:10px;
+height:110px;
+border:2px solid black;
+outline:2px solid red;
+outline-offset:15px;
+}		</style>
+	</head>
+	<body>
+		<h1>
+			CSS3 <span class="color_h1">User Interface</span></h1>
+		<hr />
+		<p>
+			CSS3 has new user interface features such as resizing elements, outlines, and box sizing.</p>
+		<p>
+			In this chapter you will learn about the following user interface properties:</p>
+		<ul>
+			<li>
+				<code>resize</code></li>
+			<li>
+				<code>outline-offset</code></li>
+		</ul>
+		<hr />
+		<h2>
+			Browser Support</h2>
+		<p>
+			The numbers in the table specify the first browser version that fully supports the property.</p>
+		<p>
+			Numbers followed by -webkit- or -moz- specify the first version that worked with a prefix.</p>
+		<div class="w3-responsive">
+			<table class="browserref notranslate">
+				<tbody>
+					<tr>
+						<th style="width:22%;font-size:16px;text-align:left;">
+							Property</th>
+						<th class="bsChrome" style="width:13%;" title="Chrome">
+							&nbsp;</th>
+						<th class="bsIE" style="width:13%;" title="Internet Explorer">
+							&nbsp;</th>
+						<th class="bsFirefox" style="width:13%;" title="Firefox">
+							&nbsp;</th>
+						<th class="bsSafari" style="width:13%;" title="Safari">
+							&nbsp;</th>
+						<th class="bsOpera" style="width:13%;" title="Opera">
+							&nbsp;</th>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							resize</td>
+						<td>
+							4.0</td>
+						<td>
+							<span class="deprecated">Not supported</span></td>
+						<td>
+							5.0<br />
+							4.0&nbsp;-moz-</td>
+						<td>
+							4.0</td>
+						<td>
+							15.0</td>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							outline-offset</td>
+						<td>
+							4.0</td>
+						<td>
+							<span class="deprecated">Not supported</span></td>
+						<td>
+							5.0<br />
+							4.0&nbsp;-moz-</td>
+						<td>
+							4.0</td>
+						<td>
+							9.5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr />
+		<h2>
+			CSS3 Resizing</h2>
+		<p>
+			The <code>resize</code> property specifies whether or not an element should be resizable by the user.</p>
+		<div id="resize">
+			This div element is resizable by the user (works in Chrome, Firefox, Safari and Opera).</div>
+		<p>
+			The following example lets the user resize only the width of a &lt;div&gt; element:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">resize:</span><span class="highVAL"> horizontal;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">overflow:</span><span class="highVAL"> auto;</span><br />
+				}</div>
+		</div>
+		<p>
+			The following example lets the user resize only the height of a &lt;div&gt; element:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">resize:</span><span class="highVAL"> vertical;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">overflow:</span><span class="highVAL"> auto;</span><br />
+				}</div>
+		</div>
+		<p>
+			The following example lets the user resize both the height and the width of a &lt;div&gt; element:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">resize:</span><span class="highVAL"> both;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">overflow:</span><span class="highVAL"> auto;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			CSS3 Outline Offset</h2>
+		<p>
+			The <code>outline-offset</code> property adds space between an outline and the edge or border of an element.</p>
+		<p>
+			Outlines differ from borders in two ways:</p>
+		<ul>
+			<li>
+				An outline is a line drawn around elements, outside the border edge</li>
+			<li>
+				An outline do not take up space</li>
+			<li>
+				An outline may be non-rectangular</li>
+		</ul>
+		<div id="outlineoffset">
+			This div has an outline 15px outside the border edge.</div>
+		<p>
+			The following example uses the outline-offset property to add a 15px space between the border and the outline:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">border:</span><span class="highVAL"> 1px solid black;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline:</span><span class="highVAL"> 1px solid red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">outline-offset:</span><span class="highVAL"> 15px;</span><br />
+				}</div>
+		</div>
+	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>

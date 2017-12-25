@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+		<style type="text/css">
+#animated_div {
+  width:76px;
+  height:47px;
+  background: #92B901;
+color: #ffffff;
+position: relative;
+font-weight:bold;
+font-size:20px;
+padding:10px;
+animation:animated_div 5s 1;
+-moz-animation:animated_div 5s 1;
+-webkit-animation:animated_div 5s 1;
+-o-animation:animated_div 5s 1;
+border-radius:5px;
+  -webkit-border-radius:5px;
+}
+
+@keyframes animated_div
+{
+0%		{transform: rotate(0deg);left:0px;}
+25%		{transform: rotate(20deg);left:0px;}
+50%		{transform: rotate(0deg);left:500px;}
+55%		{transform: rotate(0deg);left:500px;}
+70%		{transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100%	{transform: rotate(-360deg);left:0px;}
+}
+
+@-webkit-keyframes animated_div
+{
+0%		{-webkit-transform: rotate(0deg);left:0px;}
+25%		{-webkit-transform: rotate(20deg);left:0px;}
+50%		{-webkit-transform: rotate(0deg);left:500px;}
+55%		{-webkit-transform: rotate(0deg);left:500px;}
+70%		{-webkit-transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100%	{-webkit-transform: rotate(-360deg);left:0px;}
+}
+
+@-moz-keyframes animated_div
+{
+0%   {-moz-transform: rotate(0deg);left:0px;}
+25%  {-moz-transform: rotate(20deg);left:0px;}
+50%  {-moz-transform: rotate(0deg);left:500px;}
+55%  {-moz-transform: rotate(0deg);left:500px;}
+70%  {-moz-transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100% {-moz-transform: rotate(-360deg);left:0px;}
+}
+
+@-o-keyframes animated_div
+{
+0%   {transform: rotate(0deg);left:0px;}
+25%  {transform: rotate(20deg);left:0px;}
+50%  {transform: rotate(0deg);left:500px;}
+55%  {transform: rotate(0deg);left:500px;}
+70%  {transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100% {transform: rotate(-360deg);left:0px;}
+}		</style>
+	</head>
+	<body>
+		<h1>
+			CSS3 <span class="color_h1">Animations</span></h1>
+		<hr />
+		<p>
+			CSS3 animations allows animation of most HTML elements without using JavaScript or Flash!</p>
+		<div id="animated_div">
+			CSS3<br />
+			<span style="font-size:10px;">Animation</span></div>
+		<hr />
+		<h2>
+			Browser Support for Animations</h2>
+		<p>
+			The numbers in the table specify the first browser version that fully supports the property.</p>
+		<p>
+			Numbers followed by -webkit-, -moz-, or -o- specify the first version that worked with a prefix.</p>
+		<div class="w3-responsive">
+			<table class="browserref notranslate">
+				<tbody>
+					<tr>
+						<th style="width:22%;font-size:16px;text-align:left;">
+							Property</th>
+						<th class="bsChrome" style="width:13%;" title="Chrome">
+							&nbsp;</th>
+						<th class="bsIE" style="width:13%;" title="Internet Explorer">
+							&nbsp;</th>
+						<th class="bsFirefox" style="width:13%;" title="Firefox">
+							&nbsp;</th>
+						<th class="bsSafari" style="width:13%;" title="Safari">
+							&nbsp;</th>
+						<th class="bsOpera" style="width:13%;" title="Opera">
+							&nbsp;</th>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							@keyframes</td>
+						<td>
+							43.0<br />
+							4.0&nbsp;-webkit-</td>
+						<td>
+							10.0</td>
+						<td>
+							16.0<br />
+							5.0&nbsp;-moz-</td>
+						<td>
+							9.0<br />
+							4.0&nbsp;-webkit-</td>
+						<td>
+							30.0<br />
+							15.0&nbsp;-webkit-<br />
+							12.0 -o-</td>
+					</tr>
+					<tr>
+						<td style="text-align:left;">
+							animation</td>
+						<td>
+							43.0<br />
+							4.0&nbsp;-webkit-</td>
+						<td>
+							10.0</td>
+						<td>
+							16.0<br />
+							5.0&nbsp;-moz-</td>
+						<td>
+							9.0<br />
+							4.0&nbsp;-webkit-</td>
+						<td>
+							30.0<br />
+							15.0&nbsp;-webkit-<br />
+							12.0&nbsp;-o-</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr />
+		<h2>
+			What are CSS3 Animations?</h2>
+		<p>
+			An animation lets an element gradually change from one style to another.</p>
+		<p>
+			You can change as many CSS properties you want, as many times you want.</p>
+		<p>
+			To use CSS3 animation, you must first specify some keyframes for the animation.</p>
+		<p>
+			Keyframes hold what styles the element will have at certain times.</p>
+		<hr />
+		<h2>
+			The @keyframes Rule</h2>
+		<p>
+			When you specify CSS styles inside the <code>@keyframes</code> rule, the animation will gradually change from the current style to the new style at certain times.</p>
+		<p>
+			To get an animation to work, you must bind the animation to an element.</p>
+		<p>
+			The following example binds the &quot;example&quot; animation to the &lt;div&gt; element. The animation will lasts for 4 seconds, and it will gradually change the background-color of the &lt;div&gt; element from &quot;red&quot; to &quot;yellow&quot;:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highCOM">/* The animation code */</span><br />
+				<span class="highELE">@keyframes example </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; from </span>{<span class="highATT">background-color:</span><span class="highVAL"> red;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; to </span>{<span class="highATT">background-color:</span><span class="highVAL"> yellow;</span>}<br />
+				}<br />
+				<br />
+				<span class="highCOM">/* The element to apply the animation to */</span><br />
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-name:</span><span class="highVAL"> example;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-duration:</span><span class="highVAL"> 4s;</span><br />
+				}</div>
+		</div>
+		<p>
+			<b>Note:</b> If the <code>animation-duration</code> property is not specified, the animation will have no effect, because the default value is 0.&nbsp;</p>
+		<p>
+			In the example above we have specified when the style will change by using the keywords &quot;from&quot; and &quot;to&quot; (which represents 0% (start) and 100% (complete)).</p>
+		<p>
+			It is also possible to use percent. By using percent, you can add as many style changes as you like.</p>
+		<p>
+			The following example will change the background-color of the &lt;div&gt; element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highCOM">/* The animation code */</span><br />
+				<span class="highELE">@keyframes example </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; 0%&nbsp;&nbsp; </span>{<span class="highATT">background-color:</span><span class="highVAL"> red;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; 25%&nbsp; </span>{<span class="highATT">background-color:</span><span class="highVAL"> yellow;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; 50%&nbsp; </span>{<span class="highATT">background-color:</span><span class="highVAL"> blue;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; 100% </span>{<span class="highATT">background-color:</span><span class="highVAL"> green;</span>}<br />
+				}<br />
+				<br />
+				<span class="highCOM">/* The element to apply the animation to */</span><br />
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-name:</span><span class="highVAL"> example;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-duration:</span><span class="highVAL"> 4s;</span><br />
+				}</div>
+		</div>
+		<p>
+			The following example will change both the background-color and the position of the &lt;div&gt; element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highCOM">/* The animation code */</span><br />
+				<span class="highELE">@keyframes example </span>{<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; 0%&nbsp;&nbsp; </span>{<span class="highATT">background-color:</span><span class="highVAL"> red;</span> <span class="highATT">left:</span><span class="highVAL">0px;</span> <span class="highATT">top:</span><span class="highVAL">0px;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; 25%&nbsp; </span>{<span class="highATT">background-color:</span><span class="highVAL"> yellow;</span> <span class="highATT">left:</span><span class="highVAL">200px;</span> <span class="highATT">top:</span><span class="highVAL">0px;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; 50%&nbsp; </span>{<span class="highATT">background-color:</span><span class="highVAL"> blue;</span> <span class="highATT">left:</span><span class="highVAL">200px;</span> <span class="highATT">top:</span><span class="highVAL">200px;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; 75%&nbsp; </span>{<span class="highATT">background-color:</span><span class="highVAL"> green;</span> <span class="highATT">left:</span><span class="highVAL">0px;</span> <span class="highATT">top:</span><span class="highVAL">200px;</span>}<br />
+				<span class="highELE">&nbsp;&nbsp;&nbsp; 100% </span>{<span class="highATT">background-color:</span><span class="highVAL"> red;</span> <span class="highATT">left:</span><span class="highVAL">0px;</span> <span class="highATT">top:</span><span class="highVAL">0px;</span>}<br />
+				}<br />
+				<br />
+				<span class="highCOM">/* The element to apply the animation to */</span><br />
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> relative;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-name:</span><span class="highVAL"> example;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-duration:</span><span class="highVAL"> 4s;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Delay an Animation</h2>
+		<p>
+			The <code>animation-delay</code> property specifies a delay for the start of an animation.</p>
+		<p>
+			The following example has a 2 seconds delay before starting the animation:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> relative;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-name:</span><span class="highVAL"> example;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-duration:</span><span class="highVAL"> 4s;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-delay:</span><span class="highVAL"> 2s;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Set How Many Times an Animation Should Run</h2>
+		<p>
+			The <code>animation-iteration-count</code> property specifies the number of times an animation should run.</p>
+		<p>
+			The following example will run the animation 3 times before it stops:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> relative;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-name:</span><span class="highVAL"> example;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-duration:</span><span class="highVAL"> 4s;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-iteration-count:</span><span class="highVAL"> 3;</span><br />
+				}</div>
+		</div>
+		<p>
+			The following example uses the value &quot;infinite&quot; to make the animation continue for ever:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> relative;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-name:</span><span class="highVAL"> example;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-duration:</span><span class="highVAL"> 4s;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-iteration-count:</span><span class="highVAL"> infinite;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Run Animation in Reverse Direction or Alternate Cycles</h2>
+		<p>
+			The <code>animation-direction</code> property is used to let an animation run in reverse direction or alternate cycles.</p>
+		<p>
+			The following example will run the animation in reverse direction:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> relative;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-name:</span><span class="highVAL"> example;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-duration:</span><span class="highVAL"> 4s;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-iteration-count:</span><span class="highVAL"> 3;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-direction:</span><span class="highVAL"> reverse;</span><br />
+				}</div>
+		</div>
+		<p>
+			The following example uses the value &quot;alternate&quot; to make the animation first run forward, then backward, then forward:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 100px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> relative;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background-color:</span><span class="highVAL"> red;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-name:</span><span class="highVAL"> example;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-duration:</span><span class="highVAL"> 4s;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-iteration-count:</span><span class="highVAL"> 3;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-direction:</span><span class="highVAL"> alternate;</span><br />
+				}</div>
+		</div>
+		<hr />
+		<h2>
+			Specify the Speed Curve of the Animation</h2>
+		<p>
+			The <code>animation-timing-function</code> property specifies the speed curve of the animation.</p>
+		<p>
+			The animation-timing-function property can have the following values:</p>
+		<ul>
+			<li>
+				<code>ease</code> - specifies an animation with a slow start, then fast, then end slowly (this is default)</li>
+			<li>
+				<code>linear</code> - specifies an animation with the same speed from start to end</li>
+			<li>
+				<code>ease-in</code> - specifies an animation with a slow start</li>
+			<li>
+				<code>ease-out</code> - specifies an animation with a slow end</li>
+			<li>
+				<code>ease-in-out</code> - specifies an animation with a slow start and end</li>
+			<li>
+				<code>cubic-bezier(n,n,n,n)</code> - lets you define your own values in a cubic-bezier function</li>
+		</ul>
+		<p>
+			The following example shows the some of the different speed curves that can be used:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">#div1 </span>{<span class="highATT">animation-timing-function:</span><span class="highVAL"> linear;</span>}<br />
+				<span class="highELE">#div2 </span>{<span class="highATT">animation-timing-function:</span><span class="highVAL"> ease;</span>}<br />
+				<span class="highELE">#div3 </span>{<span class="highATT">animation-timing-function:</span><span class="highVAL"> ease-in;</span>}<br />
+				<span class="highELE">#div4 </span>{<span class="highATT">animation-timing-function:</span><span class="highVAL"> ease-out;</span>}<br />
+				<span class="highELE">#div5 </span>{<span class="highATT">animation-timing-function:</span><span class="highVAL"> ease-in-out;</span>}</div>
+		</div>
+		<hr />
+		<h2>
+			Animation Shorthand Property</h2>
+		<p>
+			The example below uses six of the animation properties:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-name:</span><span class="highVAL"> example;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-duration:</span><span class="highVAL"> 5s;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-timing-function:</span><span class="highVAL"> linear;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-delay:</span><span class="highVAL"> 2s;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-iteration-count:</span><span class="highVAL"> infinite;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation-direction:</span><span class="highVAL"> alternate;</span><br />
+				}</div>
+		</div>
+		<p>
+			The same animation effect as above can be achieved by using the shorthand <code>animation</code> property:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">div </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">animation:</span><span class="highVAL"> example 5s linear 2s infinite alternate;</span><br />
+				}</div>
+		</div>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>

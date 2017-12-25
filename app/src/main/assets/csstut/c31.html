@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="file:///android_asset/w3.css">
+		<link rel="stylesheet" href="file:///android_asset/mtech.css">
+	</head>
+	<body>
+		<h1>
+			CSS <span class="color_h1">Image Sprites</span></h1>
+		<hr />
+		<h2>
+			Image Sprites</h2>
+		<p>
+			An image sprite is a collection of images put into a single image.</p>
+		<p>
+			A web page with many images can take a long time to load and generates multiple server requests.</p>
+		<p>
+			Using image sprites will reduce the number of server requests and save bandwidth.</p>
+		<hr />
+		<h2>
+			Image Sprites - Simple Example</h2>
+		<p>
+			Instead of using three separate images, we use this single image (&quot;img_navsprites.gif&quot;):</p>
+		<p>
+			<img alt="navigation images" src="file:///android_asset/csstut/img_navsprites.gif" /></p>
+		<p>
+			With CSS, we can show just the part of the image we need.</p>
+		<p>
+			In the following example the CSS specifies which part of the &quot;img_navsprites.gif&quot; image to show:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">#home </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 46px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 44px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> url(img_navsprites.gif) 0 0;</span><br />
+				}</div>
+		</div>
+		<p>
+			<b>Example explained:</b></p>
+		<ul>
+			<li>
+				<code>&lt;img id=&quot;home&quot; src=&quot;img_trans.gif&quot;&gt;</code> - Only defines a small transparent image because the src attribute cannot be empty. The displayed image will be the background image we specify in CSS</li>
+			<li>
+				<code>width: 46px; height: 44px;</code> - Defines the portion of the image we want to use</li>
+			<li>
+				<code>background: url(img_navsprites.gif) 0 0;</code> - Defines the background image and its position (left 0px, top 0px)</li>
+		</ul>
+		<p>
+			This is the easiest way to use image sprites, now we want to expand it by using links and hover effects.</p>
+		<hr />
+		<h2>
+			Image Sprites - Create a Navigation List</h2>
+		<p>
+			We want to use the sprite image (&quot;img_navsprites.gif&quot;) to create a navigation list.</p>
+		<p>
+			We will use an HTML list, because it can be a link and also supports a background image:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">#navlist </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> relative;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">#navlist li </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">margin:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">padding:</span><span class="highVAL"> 0;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">list-style:</span><span class="highVAL"> none;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">position:</span><span class="highVAL"> absolute;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">top:</span><span class="highVAL"> 0;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">#navlist li, #navlist a </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">height:</span><span class="highVAL"> 44px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">display:</span><span class="highVAL"> block;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">#home </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">left:</span><span class="highVAL"> 0px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 46px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> url(&#39;img_navsprites.gif&#39;) 0 0;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">#prev </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">left:</span><span class="highVAL"> 63px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 43px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> url(&#39;img_navsprites.gif&#39;) -47px 0;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">#next </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">left:</span><span class="highVAL"> 129px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">width:</span><span class="highVAL"> 43px;</span><br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> url(&#39;img_navsprites.gif&#39;) -91px 0;</span><br />
+				}</div>
+		</div>
+		<p>
+			<b>Example explained:</b></p>
+		<ul>
+			<li>
+				#navlist {position:relative;} - position is set to relative to allow absolute positioning inside it</li>
+			<li>
+				#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} - margin and padding is set to 0, list-style is removed, and all list items are absolute positioned</li>
+			<li>
+				#navlist li, #navlist a {height:44px;display:block;} - the height of all the images are 44px</li>
+		</ul>
+		<p>
+			Now start to position and style for each specific part:</p>
+		<ul>
+			<li>
+				#home {left:0px;width:46px;} - Positioned all the way to the left, and the width of the image is 46px</li>
+			<li>
+				#home {background:url(img_navsprites.gif) 0 0;} - Defines the background image and its position (left 0px, top 0px)</li>
+			<li>
+				#prev {left:63px;width:43px;} - Positioned 63px to the right (#home width 46px + some extra space between items), and the width is 43px.</li>
+			<li>
+				#prev {background:url(&#39;img_navsprites.gif&#39;) -47px 0;} - Defines the background image 47px to the right (#home width 46px + 1px line divider)</li>
+			<li>
+				#next {left:129px;width:43px;}- Positioned 129px to the right (start of #prev is 63px + #prev width 43px + extra space), and the width is 43px.</li>
+			<li>
+				#next {background:url(&#39;img_navsprites.gif&#39;) -91px 0;} - Defines the background image 91px to the right (#home width 46px + 1px line divider + #prev width 43px + 1px line divider )</li>
+		</ul>
+		<hr />
+		<h2>
+			Image Sprites - Hover Effect</h2>
+		<p>
+			Now we want to add a hover effect to our navigation list.</p>
+		<table class="lamp">
+			<tbody>
+				<tr>
+					<th style="width:34px">
+						<img alt="Note" src="file:///android_asset/csstut/note.jpg" style="height:32px;width:32px" /></th>
+					<td>
+						<strong>Tip:</strong> The <code>:hover</code> selector can be used on all elements, not only on links.</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			Our new image (&quot;img_navsprites_hover.gif&quot;) contains three navigation images and three images to use for hover effects:</p>
+		<p>
+			<img alt="navigation images" src="file:///android_asset/csstut/img_navsprites_hover.gif" /></p>
+		<p>
+			Because this is one single image, and not six separate files, there will be <b>no loading delay</b> when a user hovers over the image.</p>
+		<p>
+			We only add three lines of code to add the hover effect:</p>
+		<div class="w3-example">
+			<h3>
+				Example</h3>
+			<div class="w3-code notranslate cssHigh">
+				<span class="highELE">#home a:hover </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> url(&#39;img_navsprites_hover.gif&#39;) 0 -45px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">#prev a:hover </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> url(&#39;img_navsprites_hover.gif&#39;) -47px -45px;</span><br />
+				}<br />
+				<br />
+				<span class="highELE">#next a:hover </span>{<br />
+				&nbsp;&nbsp;&nbsp; <span class="highATT">background:</span><span class="highVAL"> url(&#39;img_navsprites_hover.gif&#39;) -91px -45px;</span><br />
+				}</div>
+		</div>
+		<p>
+			Example explained:</p>
+		<ul>
+			<li>
+				#home a:hover {background: transparent url(&#39;img_navsprites_hover.gif&#39;) 0 -45px;} - For all three hover images we specify the same background position, only 45px further down</li>
+		</ul>
+	<p>&nbsp;
+			</p>
+	
+	</body>
+</html>
